@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   programs.firefox = {
@@ -46,8 +46,18 @@
             installation_mode = "force_installed";
             updates_disabled = true;
           };
+
+          "ff2mpv@yossarian.net" = {
+            install_url = moz "ff2mpv";
+            installation_mode = "force_installed";
+            updates_disable = true;
+          };
         };
     };
+    #for ff2mpv addon firefox
+    nativeMessagingHosts.packages = with pkgs; [
+      ff2mpv-rust
+    ];
   };
 
   home-manager.users.bnjlka = {
