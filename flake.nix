@@ -19,5 +19,14 @@
           sops-nix.nixosModules.sops
         ];
       };
+
+      nixosConfigurations.machine = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/jlowka/configuration.nix
+          home-manager.nixosModules.home-manager
+          sops-nix.nixosModules.sops
+        ];
+      };
     };
 }

@@ -13,6 +13,7 @@
     ../../modules/desktop/firefox.nix
     ../../modules/desktop/mpv.nix
     ../../modules/desktop/git.nix
+    ../../modules/desktop/steam.nix
     ../../modules/networking/xray/xray.nix
     ../../modules/networking/tproxy-xray/tproxy-xray.nix
     ../../modules/system/packages.nix
@@ -29,7 +30,7 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "jlowka"; # Define your hostname.
+  networking.hostName = "machine"; # Define your hostname.
 
   # Enable networking
   networking.networkmanager = {
@@ -39,10 +40,6 @@
 
   hardware.graphics = {
     enable = true;
-    extraPackages = with pkgs; [ intel-media-driver ];
-  };
-  environment.sessionVariables = {
-    LIBVA_DRIVER_NAME = "iHD";
   };
 
   # This value determines the NixOS release from which the default
