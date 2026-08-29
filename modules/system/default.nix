@@ -2,10 +2,18 @@
 
 {
   #nix settings
-  nix.settings.extra-experimental-features = [
-    "flakes"
-    "nix-command"
-  ];
+  nix = {
+    settings.extra-experimental-features = [
+      "flakes"
+      "nix-command"
+    ];
+    #garbage collector
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
+    };
+  };
 
   #fonts
   fonts.packages = with pkgs; [

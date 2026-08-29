@@ -13,6 +13,7 @@
     ../../modules/desktop/firefox.nix
     ../../modules/desktop/mpv.nix
     ../../modules/desktop/git.nix
+    ../../modules/networking/wireguard.nix
     ../../modules/networking/xray/xray.nix
     ../../modules/networking/tproxy-xray/tproxy-xray.nix
     ../../modules/system/packages.nix
