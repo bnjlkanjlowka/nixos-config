@@ -27,6 +27,7 @@
           method = "manual";
           addresses = "10.0.10.2/24";
           dns = "192.168.10.115;192.168.20.1";
+          dns-search = "~home.lan";
         };
 
         ipv6 = {

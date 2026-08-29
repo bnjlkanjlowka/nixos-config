@@ -3,7 +3,7 @@
 {
   sops = {
     secrets.xray-config = {
-      sopsFile = ../../../secrets/xray/config.json;
+      sopsFile = ../../secrets/xray/config.json;
       format = "json";
       key = "";
     };

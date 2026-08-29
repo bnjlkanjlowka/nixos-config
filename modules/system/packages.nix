@@ -5,7 +5,6 @@
 
   programs.fish.enable = true;
   programs.firejail.enable = true;
-  programs.git.enable = true;
 
   environment.systemPackages = with pkgs; [
     zed-editor
@@ -26,14 +25,14 @@
   };
 
   programs.firejail.wrappedBinaries = {
-      Discord = {
-        executable = "${pkgs.discord}/bin/Discord";
-        desktop = "${pkgs.discord}/share/applications/discord.desktop";
-        extraArgs = [
-          "--noprofile"
-          "--netns=proxy"
-          "--blacklist=/var/run/nscd"
-        ];
-      };
+    Discord = {
+      executable = "${pkgs.discord}/bin/Discord";
+      desktop = "${pkgs.discord}/share/applications/discord.desktop";
+      extraArgs = [
+        "--noprofile"
+        "--netns=proxy"
+        "--blacklist=/var/run/nscd"
+      ];
     };
+  };
 }

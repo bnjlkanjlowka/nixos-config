@@ -8,16 +8,20 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+
     ../../modules/desktop/gnome.nix
     ../../modules/desktop/alacritty.nix
     ../../modules/desktop/firefox.nix
     ../../modules/desktop/mpv.nix
     ../../modules/desktop/git.nix
-    ../../modules/networking/wireguard.nix
-    ../../modules/networking/xray/xray.nix
+
+    ../../modules/networking
+    ../../modules/networking/xray.nix
     ../../modules/networking/tproxy-xray/tproxy-xray.nix
-    ../../modules/system/packages.nix
+    ../../modules/networking/wireguard.nix
+
     ../../modules/system
+    ../../modules/system/packages.nix
     ../../modules/system/users.nix
   ];
 
