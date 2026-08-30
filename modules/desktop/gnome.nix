@@ -17,7 +17,6 @@
   ];
 
   home-manager.users.bnjlka = { lib, ... }: {
-    home.stateVersion = "26.05";
     dconf = {
       enable = true;
       settings = {
@@ -114,7 +113,7 @@
         };
         "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
           name = "Terminal";
-          command = "alacritty";
+          command = "ptyxis -s";
           binding = "<Super>Return";
         };
 

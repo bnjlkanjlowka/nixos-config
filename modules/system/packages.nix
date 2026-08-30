@@ -15,6 +15,7 @@
     bluetuith
     feishin
     discord
+    spotify
   ];
 
   security.wrappers.btop = {

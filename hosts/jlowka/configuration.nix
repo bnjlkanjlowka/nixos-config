@@ -10,7 +10,7 @@
     ./hardware-configuration.nix
 
     ../../modules/desktop/gnome.nix
-    ../../modules/desktop/alacritty.nix
+    ../../modules/desktop/ptyxis.nix
     ../../modules/desktop/firefox.nix
     ../../modules/desktop/mpv.nix
     ../../modules/desktop/git.nix
@@ -48,6 +48,10 @@
   };
   environment.sessionVariables = {
     LIBVA_DRIVER_NAME = "iHD";
+  };
+
+  home-manager.users.bnjlka = {
+    home.stateVersion = "26.05";
   };
 
   # This value determines the NixOS release from which the default
