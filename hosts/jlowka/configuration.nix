@@ -13,16 +13,17 @@
     ../../modules/desktop/ptyxis.nix
     ../../modules/desktop/firefox.nix
     ../../modules/desktop/mpv.nix
-    ../../modules/desktop/git.nix
 
     ../../modules/networking
-    ../../modules/networking/xray.nix
-    ../../modules/networking/tproxy-xray/tproxy-xray.nix
     ../../modules/networking/wireguard.nix
 
     ../../modules/system
-    ../../modules/system/packages.nix
     ../../modules/system/users.nix
+
+    ../../modules/packages
+    ../../modules/packages/desktop.nix
+
+    ../../modules/git.nix
   ];
 
   home-manager.backupFileExtension = "backup";

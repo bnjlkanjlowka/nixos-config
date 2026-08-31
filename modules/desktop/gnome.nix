@@ -1,19 +1,22 @@
 {
-  config,
   pkgs,
   ...
 }:
 
 {
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
+  services = {
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
+    gnome.core-apps.enable = false;
+  };
 
-  programs.dconf.enable = true;
-
-  environment.systemPackages = with pkgs.gnomeExtensions; [
-    blur-my-shell
-    clipboard-history
-    disable-workspace-switcher-overlay
+  environment.systemPackages = with pkgs; [
+    nautilus
+    papers
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.clipboard-history
+    gnomeExtensions.disable-workspace-switcher-overlay
+    gnomeExtensions.mpris-label
   ];
 
   home-manager.users.bnjlka = { lib, ... }: {
@@ -43,6 +46,7 @@
             blur-my-shell.extensionUuid
             clipboard-history.extensionUuid
             disable-workspace-switcher-overlay.extensionUuid
+            mpris-label.passthru.extensionUuid
           ];
           favorite-apps = [
             "firefox.desktop"

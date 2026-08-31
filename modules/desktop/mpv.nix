@@ -1,12 +1,6 @@
 { pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-    mpv
-    mpvScripts.mpris
-    yt-dlp
-  ];
-
   home-manager.users.bnjlka = {
     programs.mpv = {
       enable = true;
@@ -14,6 +8,9 @@
         "9" = "add ao-volume -2";
         "0" = "add ao-volume 2";
       };
+      scripts = [
+        pkgs.mpvScripts.mpris
+      ];
     };
 
     programs.yt-dlp = {

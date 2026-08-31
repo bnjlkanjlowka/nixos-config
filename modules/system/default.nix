@@ -14,6 +14,7 @@
       options = "--delete-older-than 7d";
     };
   };
+  nixpkgs.config.allowUnfree = true;
 
   #fonts
   fonts.packages = with pkgs; [
