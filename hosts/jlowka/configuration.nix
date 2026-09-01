@@ -26,21 +26,12 @@
     ../../modules/git.nix
   ];
 
-  home-manager.backupFileExtension = "backup";
-
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  # Use latest kernel.
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
-  networking.hostName = "jlowka"; # Define your hostname.
-
-  # Enable networking
-  networking.networkmanager = {
-    enable = true;
-    wifi.backend = "iwd";
+  networking = {
+    hostName = "jlowka";
+    networkmanager = {
+      enable = true;
+      wifi.backend = "iwd";
+    };
   };
 
   hardware.graphics = {
@@ -51,8 +42,11 @@
     LIBVA_DRIVER_NAME = "iHD";
   };
 
-  home-manager.users.bnjlka = {
-    home.stateVersion = "26.05";
+  home-manager = {
+    backupFileExtension = "backup";
+    users.bnjlka = {
+      home.stateVersion = "26.05";
+    };
   };
 
   # This value determines the NixOS release from which the default
@@ -62,5 +56,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "26.05"; # Did you read the comment?
-
 }

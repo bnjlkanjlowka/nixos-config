@@ -16,6 +16,7 @@
     gnomeExtensions.blur-my-shell
     gnomeExtensions.clipboard-history
     gnomeExtensions.disable-workspace-switcher-overlay
+    gnomeExtensions.auto-move-windows
     gnomeExtensions.mpris-label
   ];
 
@@ -46,10 +47,13 @@
             blur-my-shell.extensionUuid
             clipboard-history.extensionUuid
             disable-workspace-switcher-overlay.extensionUuid
+            auto-move-windows.extensionUuid
             mpris-label.passthru.extensionUuid
           ];
           favorite-apps = [
             "firefox.desktop"
+            "dev.zed.Zed.desktop"
+            "feishin.desktop"
           ];
         };
 
@@ -110,21 +114,25 @@
           toggle-message-tray = [ ];
         };
 
-        "org/gnome/settings-daemon/plugins/media-keys" = {
-          custom-keybindings = [
-            "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
-          ];
-        };
-        "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
-          name = "Terminal";
-          command = "ptyxis -s";
-          binding = "<Super>Return";
-        };
-
         "org/gnome/desktop/peripherals/mouse" = {
           accel-profile = "flat";
         };
+
+        "org/gnome/shell/extensions/mpris-label" = {
+          extension-index = 0;
+          remove-text-when-paused = false;
+        };
+
+        "org/gnome/shell/extensions/auto-move-windows" = {
+          application-list = [
+            "firefox.desktop:1"
+            "dev.zed.Zed.desktop:3"
+            "feishin.desktop:5"
+          ];
+        };
       };
     };
+    xdg.configFile."autostart/firefox.desktop".source =
+      "${pkgs.firefox}/share/applications/firefox.desktop";
   };
 }

@@ -56,6 +56,10 @@
   #sshd
   services.openssh = {
     enable = true;
+    ports = [1285];
+    settings = {
+      PermitRootLogin = "no";
+    };
   };
 
   #secrets
@@ -63,5 +67,15 @@
     age.sshKeyPaths = [
       "/etc/ssh/ssh_host_ed25519_key"
     ];
+  };
+
+  boot = {
+    #systemd-boot enable
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
+    #last kernel
+    kernelPackages = pkgs.linuxPackages_latest;
   };
 }
