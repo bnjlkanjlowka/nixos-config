@@ -8,38 +8,41 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+
     ../../modules/desktop/gnome.nix
-    ../../modules/desktop/alacritty.nix
+    ../../modules/desktop/ptyxis.nix
     ../../modules/desktop/firefox.nix
     ../../modules/desktop/mpv.nix
-    ../../modules/desktop/git.nix
     ../../modules/desktop/steam.nix
-    ../../modules/networking/xray/xray.nix
-    ../../modules/networking/tproxy-xray/tproxy-xray.nix
-    ../../modules/system/packages.nix
+
+    ../../modules/networking
+    ../../modules/networking/wireguard.nix
+
     ../../modules/system
     ../../modules/system/users.nix
+
+    ../../modules/packages
+    ../../modules/packages/desktop.nix
+
+    ../../modules/git.nix
   ];
 
-  home-manager.backupFileExtension = "backup";
-
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  # Use latest kernel.
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
-  networking.hostName = "machine"; # Define your hostname.
-
-  # Enable networking
-  networking.networkmanager = {
-    enable = true;
-    wifi.backend = "iwd";
+  networking = {
+    hostName = "machine";
+    networkmanager = {
+      enable = true;
+    };
   };
 
   hardware.graphics = {
     enable = true;
+  };
+
+  home-manager = {
+    backupFileExtension = "backup";
+    users.bnjlka = {
+      home.stateVersion = "26.05";
+    };
   };
 
   # This value determines the NixOS release from which the default
@@ -49,5 +52,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "26.05"; # Did you read the comment?
-
 }
