@@ -55,6 +55,8 @@
     enable = true;
   };
 
+  hardware.enableAllFirmware = true;
+
   home-manager = {
     backupFileExtension = "backup";
     users.bnjlka = {
