@@ -23,6 +23,12 @@
 
   systemd.network = {
     enable = true;
+    networks = {
+      "10-wired" = {
+        matchConfig.Name = "ens18";
+        networkConfig.DHCP = "yes";
+      };
+    };
   };
 
   hardware.graphics = {
