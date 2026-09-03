@@ -27,7 +27,14 @@
     networks = {
       "10-wired" = {
         matchConfig.Name = "ens18";
-        networkConfig.DHCP = "yes";
+        networkConfig = {
+          DHCP = "yes";
+          IPv6AcceptRA = true;
+        };
+        dhcpV4Config = {
+          UseDNS = true;
+          UseDomains = true;
+        };
       };
     };
   };
