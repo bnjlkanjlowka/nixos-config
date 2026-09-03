@@ -5,7 +5,7 @@
     enable = true;
     settings = {
       server = {
-        interface = "192.168.30.112";
+        interface = "0.0.0.0";
         port = "5353";
       };
     };
