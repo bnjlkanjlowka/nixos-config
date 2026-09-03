@@ -1,0 +1,7 @@
+{ ... }:
+
+{
+  services.unbound = {
+    enable = true;
+  };
+}

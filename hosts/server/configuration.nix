@@ -9,6 +9,9 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
 
+    ../../modules/services/pihole.nix
+    ../../modules/services/unbound.nix
+
     ../../modules/system
     ../../modules/system/users.nix
 
