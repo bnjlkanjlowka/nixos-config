@@ -42,6 +42,12 @@
     };
   };
 
+  services.resolved = {
+    settings.Resolve = {
+      DNSStubListener = "no";
+    };
+  };
+
   hardware.graphics = {
     enable = true;
   };
