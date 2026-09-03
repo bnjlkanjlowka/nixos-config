@@ -12,7 +12,7 @@
     ../../modules/services/pihole.nix
     ../../modules/services/unbound.nix
     ../../modules/services/navidrome.nix
-    ../../modules/service/nginx.nix
+    ../../modules/services/nginx.nix
 
     ../../modules/system
     ../../modules/system/users.nix
