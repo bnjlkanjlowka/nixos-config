@@ -3,14 +3,15 @@
 {
   programs.fish.enable = true;
   environment.systemPackages = with pkgs; [
-    btop
+    btop-rocm
+    rocmPackages.rocm-smi
     wget
   ];
 
   security.wrappers.btop = {
     owner = "root";
     group = "root";
-    source = "${pkgs.btop}/bin/btop";
+    source = "${pkgs.btop-rocm}/bin/btop";
     capabilities = "cap_perfmon+ep";
   };
 }
