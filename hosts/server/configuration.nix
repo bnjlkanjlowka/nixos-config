@@ -23,6 +23,9 @@
   networking = {
     hostName = "server";
     useNetworkd = true;
+    firewall = {
+      allowedTCPPorts = [ 8080 ];
+    };
   };
 
   systemd.network = {
