@@ -4,7 +4,7 @@
   services.unbound = {
     enable = true;
     settings = {
-      port = 5353;
+      port = "5353";
     };
   };
 }
