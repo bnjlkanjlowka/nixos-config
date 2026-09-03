@@ -4,6 +4,7 @@
   services.navidrome = {
     enable = true;
     settings.MusicFolder = "/data/music";
+    settings.Address = "0.0.0.0";
     openFirewall = true;
   };
 
