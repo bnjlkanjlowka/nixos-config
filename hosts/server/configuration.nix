@@ -11,6 +11,7 @@
 
     ../../modules/services/pihole.nix
     ../../modules/services/unbound.nix
+    ../../modules/services/navidrome.nix
 
     ../../modules/system
     ../../modules/system/users.nix
