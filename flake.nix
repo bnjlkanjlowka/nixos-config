@@ -39,5 +39,17 @@
           }
         ];
       };
+
+      nixosConfigurations.server = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/server/configuration.nix
+          home-manager.nixosModules.home-manager
+          sops-nix.nixosModules.sops
+          {
+            nixpkgs.overlays = import ./overlays;
+          }
+        ];
+      };
     };
 }
