@@ -19,6 +19,7 @@
 
   networking = {
     hostName = "server";
+    useNetworkd = true;
   };
 
   systemd.network = {
