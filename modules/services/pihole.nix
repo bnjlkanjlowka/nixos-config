@@ -12,13 +12,21 @@
 
       lists = [
         {
-          url = "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/pro.plus.txt";
+          url = "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/ultimate.txt";
           type = "block";
           enabled = true;
-          description = "hagezi blocklist pro plus";
+          description = "hagezi blocklist ultimate";
+        }
+
+        {
+          url = "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/tif.txt";
+          type = "block";
+          enabled = true;
+          description = "hagezi blocklist threat feeds";
         }
       ];
     };
+
     pihole-web = {
       enable = true;
       ports = [ "8080" ];
