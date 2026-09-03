@@ -4,7 +4,10 @@
   services.unbound = {
     enable = true;
     settings = {
-      port = "5353";
+      server = {
+        interface = "192.168.30.112";
+        port = "5353";
+      };
     };
   };
 
