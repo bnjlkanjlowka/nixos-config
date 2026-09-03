@@ -5,7 +5,7 @@
     pihole-ftl = {
       enable = true;
       settings = {
-        dns.interface = [ "192.168.30.112" ];
+        dns.interface = "192.168.30.112";
       };
     };
     pihole-web = {
