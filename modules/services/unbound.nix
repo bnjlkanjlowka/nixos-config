@@ -7,4 +7,9 @@
       port = "5353";
     };
   };
+
+  networking.firewall = {
+    allowedTCPPorts = [5353];
+    allowedUDPPorts = [5353];
+  }
 }
