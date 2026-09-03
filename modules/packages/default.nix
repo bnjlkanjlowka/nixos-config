@@ -4,7 +4,6 @@
   programs.fish.enable = true;
   environment.systemPackages = with pkgs; [
     btop-rocm
-    rocmPackages.rocm-smi
     wget
   ];
 
