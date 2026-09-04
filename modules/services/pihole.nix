@@ -7,7 +7,10 @@
       settings = {
         dns = {
           upstreams = [ "192.168.30.1#53" ];
-          revServers = [ "true,192.168.30.0/24,192.168.30.1,spb.lan" ];
+          revServers = [
+            "true,192.168.30.0/24,192.168.30.1,spb.lan"
+            "true,192.168.20.0/24,192.168.20.1,home.lan"
+          ];
         };
       };
 
