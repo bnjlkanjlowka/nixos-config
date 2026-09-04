@@ -19,7 +19,6 @@
 
     ../../modules/system
     ../../modules/system/users.nix
-    ../../modules/system/fish.nix
 
     ../../modules/packages
     ../../modules/packages/desktop.nix

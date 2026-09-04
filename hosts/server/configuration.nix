@@ -14,6 +14,7 @@
     ../../modules/services/navidrome.nix
     ../../modules/services/immich.nix
     ../../modules/services/nginx.nix
+    ../../modules/services/transmission.nix
 
     ../../modules/system
     ../../modules/system/users.nix
