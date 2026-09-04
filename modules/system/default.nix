@@ -1,6 +1,10 @@
 { pkgs, ... }:
 
 {
+  imports = [
+    ./fish.nix
+  ];
+
   #nix settings
   nix = {
     settings.extra-experimental-features = [
@@ -56,7 +60,7 @@
   #sshd
   services.openssh = {
     enable = true;
-    ports = [1285];
+    ports = [ 1285 ];
     settings = {
       PermitRootLogin = "no";
     };

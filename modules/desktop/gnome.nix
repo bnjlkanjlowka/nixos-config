@@ -13,6 +13,7 @@
   environment.systemPackages = with pkgs; [
     nautilus
     papers
+    loupe
     gnomeExtensions.blur-my-shell
     gnomeExtensions.clipboard-history
     gnomeExtensions.disable-workspace-switcher-overlay
@@ -128,6 +129,7 @@
             "firefox.desktop:1"
             "dev.zed.Zed.desktop:3"
             "feishin.desktop:5"
+            "steam.desktop:4"
           ];
         };
       };
