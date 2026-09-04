@@ -18,6 +18,8 @@
     gnomeExtensions.clipboard-history
     gnomeExtensions.disable-workspace-switcher-overlay
     gnomeExtensions.auto-move-windows
+    gnomeExtensions.quick-settings-audio-panel
+    gnomeExtensions.brightness-restore
     gnomeExtensions.mpris-label
   ];
 
@@ -49,6 +51,8 @@
             clipboard-history.extensionUuid
             disable-workspace-switcher-overlay.extensionUuid
             auto-move-windows.extensionUuid
+            quick-settings-audio-panel.extensionUuid
+            brightness-restore.extensionUuid
             mpris-label.passthru.extensionUuid
           ];
           favorite-apps = [

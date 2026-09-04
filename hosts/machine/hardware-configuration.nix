@@ -59,6 +59,20 @@
     ];
   };
 
+  fileSystems."/data" = {
+    device = "bnjlka@server:/data";
+    fsType = "sshfs";
+    options = [
+      "_netdev"
+      "nofail"
+      "x-systemd.automount"
+      "x-systemd.mount-timeout=5s"
+      "IdentityFile=/home/bnjlka/.ssh/id_ed25519"
+      "allow_other"
+      "port=1285"
+    ];
+  };
+
   swapDevices = [ ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";

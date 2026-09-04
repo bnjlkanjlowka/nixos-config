@@ -3,6 +3,7 @@
 {
   imports = [
     ./fish.nix
+    ./btop.nix
   ];
 
   #nix settings
