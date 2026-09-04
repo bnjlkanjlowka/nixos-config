@@ -15,6 +15,7 @@
     ../../modules/services/immich.nix
     ../../modules/services/nginx.nix
     ../../modules/services/transmission.nix
+    ../../modules/services/jellyfin.nix
 
     ../../modules/system
     ../../modules/system/users.nix
