@@ -10,7 +10,7 @@
 
   services.kavita = {
     enable = true;
-    tokenKeyFile = config.sops.secrets.kavita-token;
+    tokenKeyFile = config.sops.secrets.kavita-token.path;
   };
 
   networking.firewall = {
