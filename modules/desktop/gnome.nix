@@ -20,6 +20,7 @@
     gnomeExtensions.auto-move-windows
     gnomeExtensions.quick-settings-audio-panel
     gnomeExtensions.brightness-restore
+    gnomeExtensions.just-perfection
     gnomeExtensions.mpris-label
   ];
 
@@ -53,6 +54,7 @@
             auto-move-windows.extensionUuid
             quick-settings-audio-panel.extensionUuid
             brightness-restore.extensionUuid
+            just-perfection.extensionUuid
             mpris-label.passthru.extensionUuid
           ];
           favorite-apps = [
@@ -88,11 +90,6 @@
           switch-to-workspace-5 = [ "<Super>5" ];
           maximize = [ "<Super>w" ];
           minimize = [ "<Super>s" ];
-
-          switch-input-source = [
-            "<Shift>Alt_L"
-            "<Alt>Shift_L"
-          ];
         };
 
         "org/gnome/shell/app-switcher" = {
@@ -135,6 +132,10 @@
             "feishin.desktop:5"
             "steam.desktop:4"
           ];
+        };
+
+        "org/gnome/shell/extensions/just-perfection" = {
+          workspace-wrap-around = true;
         };
       };
     };
