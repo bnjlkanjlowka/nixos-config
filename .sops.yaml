@@ -1,9 +1,11 @@
 keys:
   - &bnjlka age1znnta97ha8nkcfkk70th4ja4yd72gdq23j5vgtdstspnzvnc3f6s05yh6g
   - &machine age1k893et6ycvca547hy9anzlzqsw46ge6r679s93n8w8ajyew0p37q2tjs8s
+  - &server age1w6r0yspn0j4t7my0xn26r8888r6v8vdh9ry88jee77rmzl3ktg3smrn69w
 creation_rules:
   - path_regex: secrets.*/.*
     key_groups:
       - age:
           - *bnjlka
           - *machine
+          - *server
