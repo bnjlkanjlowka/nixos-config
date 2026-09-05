@@ -16,6 +16,7 @@
     ../../modules/services/nginx.nix
     ../../modules/services/transmission.nix
     ../../modules/services/jellyfin.nix
+    ../../modules/services/kavita.nix
 
     ../../modules/system
     ../../modules/system/users.nix
