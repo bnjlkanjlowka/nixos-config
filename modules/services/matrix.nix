@@ -59,7 +59,7 @@ in
     settings = {
       server_name = "bnjlkanjlowka.xyz";
       public_baseurl = "https://matrix.bnjlkanjlowka.xyz";
-      registration_shared_secret = config.sops.secrets.matrix-secret.path;
+      extraConfigFiles = [ config.sops.secrets.matrix-secret.path ];
       listeners = [
         {
           port = 8008;

@@ -12,6 +12,7 @@
     spotify
     easyeffects
     obs-studio
+    element-desktop
   ];
 
   programs.obs-studio = {
