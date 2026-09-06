@@ -18,6 +18,7 @@
     ../../modules/services/jellyfin.nix
     ../../modules/services/kavita.nix
     ../../modules/services/miniflux.nix
+    ../../modules/services/rss-bridge.nix
 
     ../../modules/system
     ../../modules/system/users.nix
@@ -67,6 +68,12 @@
     users.bnjlka = {
       home.stateVersion = "26.05";
     };
+  };
+
+  #for nginx
+  security.acme = {
+    acceptTerms = true;
+    defaults.email = "dolwans12@gmail.com";
   };
 
   # This value determines the NixOS release from which the default
