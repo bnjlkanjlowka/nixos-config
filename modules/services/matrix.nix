@@ -7,6 +7,10 @@ in
   services.postgresql = {
     enable = true;
 
+    initdbArgs = [
+      "--locale=C"
+    ];
+
     ensureDatabases = [ "matrix-synapse" ];
     ensureUsers = [
       {
