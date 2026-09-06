@@ -19,7 +19,6 @@
     ../../modules/services/kavita.nix
     ../../modules/services/miniflux.nix
     ../../modules/services/rss-bridge.nix
-    ../../modules/services/matrix.nix
 
     ../../modules/system
     ../../modules/system/users.nix
