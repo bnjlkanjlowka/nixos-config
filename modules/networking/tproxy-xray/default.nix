@@ -92,8 +92,8 @@ in
         "/var/run/nscd"
       ];
       BindReadOnlyPaths = [
-        "/etc/netns/proxy/resolv.conf:/etc/resolv.conf"
-        "/etc/netns/proxy/nsswitch.conf:/etc/nsswitch.conf"
+        "/etc/netns/proxy/resolv.conf:/etc/resolv.conf:norbind"
+        "/etc/netns/proxy/nsswitch.conf:/etc/nsswitch.conf:norbind"
       ];
       ExecStart = "${pkgs.xray}/bin/xray run -c ${config.sops.secrets."tproxy-xray-config.json".path}";
     };
