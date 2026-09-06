@@ -48,9 +48,8 @@ in
 
   sops = {
     secrets.matrix-secret = {
-      sopsFile = ../../secrets/matrix/secret.yaml;
-      format = "yaml";
-      key = "";
+      sopsFile = ../../secrets/matrix/secret;
+      format = "binary";
     };
   };
 
