@@ -53,10 +53,10 @@ in
 
   services.matrix-synapse = {
     enable = true;
+    extraConfigFiles = [ config.sops.secrets.matrix-secret.path ];
     settings = {
       server_name = "bnjlkanjlowka.xyz";
       public_baseurl = "https://matrix.bnjlkanjlowka.xyz";
-      extraConfigFiles = [ config.sops.secrets.matrix-secret.path ];
       listeners = [
         {
           port = 8008;
