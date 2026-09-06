@@ -48,6 +48,8 @@ in
       sopsFile = ../../secrets/matrix/secret.yaml;
       format = "yaml";
       key = "";
+      owner = "matrix-synapse";
+      group = "matrix-synapse";
     };
   };
 
