@@ -15,10 +15,7 @@ in
   };
   services.nginx = {
     enable = true;
-    recommendedTlsSettings = true;
-    recommendedOptimisation = true;
-    recommendedGzipSettings = true;
-    recommendedProxySettings = true;
+
     virtualHosts = {
       "bnjlkanjlowka.xyz" = {
         enableACME = true;
@@ -48,8 +45,9 @@ in
 
   sops = {
     secrets.matrix-secret = {
-      sopsFile = ../../secrets/matrix/secret;
-      format = "binary";
+      sopsFile = ../../secrets/matrix/secret.yaml;
+      format = "yaml";
+      key = "";
     };
   };
 
