@@ -13,6 +13,7 @@
     adminCredentialsFile = config.sops.secrets.miniflux-password.path;
     config = {
       LISTEN_ADDR = "127.0.0.1:8081";
+      FETCHER_ALLOW_PRIVATE_NETWORKS = 1;
     };
   };
 }
