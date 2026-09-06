@@ -3,7 +3,7 @@
 {
   sops = {
     secrets.miniflux-password = {
-      sopsFile = ../../secrets/miniflux/password;
+      sopsFile = ../../secrets/miniflux/password.env;
       format = "dotenv";
     };
   };
