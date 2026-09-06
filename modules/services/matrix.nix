@@ -72,7 +72,7 @@ in
             {
               names = [
                 "client"
-                "fedetation"
+                "federation"
               ];
               compress = true;
             }
