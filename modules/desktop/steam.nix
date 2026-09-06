@@ -5,6 +5,7 @@
     enable = true;
     extraCompatPackages = with pkgs; [
       proton-ge-bin
+      proton-ge-11-6
     ];
   };
 
@@ -21,6 +22,7 @@
     programs.lutris = {
       protonPackages = [
         pkgs.proton-ge-bin
+        pkgs.proton-ge-11-6
       ];
       extraPackages = with pkgs; [
         umu-launcher

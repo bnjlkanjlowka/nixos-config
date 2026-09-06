@@ -17,6 +17,7 @@
     ../../modules/services/transmission.nix
     ../../modules/services/jellyfin.nix
     ../../modules/services/kavita.nix
+    ../../modules/services/miniflux.nix
 
     ../../modules/system
     ../../modules/system/users.nix

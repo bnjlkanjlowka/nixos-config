@@ -23,7 +23,9 @@
           home-manager.nixosModules.home-manager
           sops-nix.nixosModules.sops
           {
-            nixpkgs.overlays = import ./overlays;
+            nixpkgs.overlays = [
+              (import ./overlays/mpris-label.nix)
+            ];
           }
         ];
       };
@@ -35,7 +37,10 @@
           home-manager.nixosModules.home-manager
           sops-nix.nixosModules.sops
           {
-            nixpkgs.overlays = import ./overlays;
+            nixpkgs.overlays = [
+              (import ./overlays/mpris-label.nix)
+              (import ./overlays/proton-ge.nix)
+            ];
           }
         ];
       };
@@ -46,9 +51,6 @@
           ./hosts/server/configuration.nix
           home-manager.nixosModules.home-manager
           sops-nix.nixosModules.sops
-          {
-            nixpkgs.overlays = import ./overlays;
-          }
         ];
       };
     };

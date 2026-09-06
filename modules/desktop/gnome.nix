@@ -55,7 +55,7 @@
             quick-settings-audio-panel.extensionUuid
             brightness-restore.extensionUuid
             just-perfection.extensionUuid
-            mpris-label.passthru.extensionUuid
+            mpris-label.extensionUuid
           ];
           favorite-apps = [
             "firefox.desktop"
