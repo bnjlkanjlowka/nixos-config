@@ -52,6 +52,7 @@ in
     secrets.matrix-secret = {
       sopsFile = ../../secrets/matrix/secret.yaml;
       format = "yaml";
+      key = "";
     };
   };
 
