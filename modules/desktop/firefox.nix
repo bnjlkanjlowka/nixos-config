@@ -59,15 +59,4 @@
       ff2mpv-rust
     ];
   };
-
-  home-manager.users.bnjlka = {
-    programs.firefox = {
-      profiles.default = {
-        settings = {
-          "sidebar.verticalTabs" = true;
-          "sidebar.revamp" = true;
-        };
-      };
-    };
-  };
 }
