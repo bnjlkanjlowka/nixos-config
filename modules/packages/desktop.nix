@@ -12,6 +12,7 @@
     spotify
     easyeffects
     obs-studio
+    moonlight-qt
   ];
 
   programs.obs-studio = {
