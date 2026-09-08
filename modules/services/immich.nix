@@ -8,26 +8,43 @@
     mediaLocation = "/data/immich";
     # `null` will give access to all devices.
     # You may want to restrict this by using something like `[ "/dev/dri/renderD128" ]`
-    accelerationDevices = null;
+    #accelerationDevices = null;
   };
 
-  users.groups = {
-    vid = {
+  users = {
+    groups.vid = {
       gid = 1005;
       members = [
         "bnjlka"
         "immich"
       ];
     };
-  };
 
-  users.users = {
-    immich = {
+    users.immich = {
       uid = 960;
       extraGroups = [
         "video"
         "render"
       ];
+    };
+  };
+
+  services.nginx = {
+    virtualHosts."vid.bnjlkanjlowka.xyz" = {
+      enableACME = true;
+      forceSSL = true;
+
+      locations."/" = {
+        proxyPass = "http://127.0.0.1:2283";
+        proxyWebsockets = true;
+        recommendedProxySettings = true;
+        extraConfig = ''
+          client_max_body_size 50000M;
+          proxy_read_timeout   600s;
+          proxy_send_timeout   600s;
+          send_timeout         600s;
+        '';
+      };
     };
   };
 }
