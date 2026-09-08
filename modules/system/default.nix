@@ -83,4 +83,10 @@
     #last kernel
     kernelPackages = pkgs.linuxPackages_latest;
   };
+
+  #run0
+  security.run0 = {
+    enable = true;
+    wheelNeedsPassword = false;
+  };
 }
