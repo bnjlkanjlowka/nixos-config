@@ -21,6 +21,8 @@
     ../../modules/services/rss-bridge.nix
     ../../modules/services/radicale.nix
 
+    ../../modules/networking/xray.nix
+
     ../../modules/system
     ../../modules/system/users.nix
 
