@@ -40,6 +40,7 @@
             nixpkgs.overlays = [
               (import ./overlays/mpris-label.nix)
               (import ./overlays/proton-ge.nix)
+              (import ./overlays/micbridge.nix)
             ];
           }
         ];

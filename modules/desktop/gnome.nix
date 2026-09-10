@@ -91,6 +91,7 @@
           switch-to-workspace-5 = [ "<Super>5" ];
           maximize = [ "<Super>w" ];
           minimize = [ "<Super>s" ];
+          activate-window-menu = [ ];
         };
 
         "org/gnome/shell/app-switcher" = {
@@ -137,6 +138,10 @@
 
         "org/gnome/shell/extensions/just-perfection" = {
           workspace-wrap-around = true;
+        };
+
+        "org/gnome/shell/extensions/blur-my-shell/panel" = {
+          blur = false;
         };
       };
     };
