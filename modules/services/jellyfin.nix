@@ -8,7 +8,7 @@
     cacheDir = "/data/jellyfin-cache";
 
     hardwareAcceleration = {
-      enable = false;
+      enable = true;
       device = "/dev/dri/renderD128";
       type = "vaapi";
     };

@@ -13,7 +13,6 @@
     easyeffects
     obs-studio
     moonlight-qt
-    micbridge
   ];
 
   programs.obs-studio = {
