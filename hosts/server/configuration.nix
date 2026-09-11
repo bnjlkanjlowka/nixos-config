@@ -9,6 +9,8 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
 
+    ../../modules/desktop/mpv.nix
+
     ../../modules/services/pihole.nix
     ../../modules/services/unbound.nix
     ../../modules/services/navidrome.nix
@@ -65,6 +67,8 @@
   };
 
   hardware.enableAllFirmware = true;
+
+  services.getty.autologinUser = "bnjlka";
 
   home-manager = {
     backupFileExtension = "backup";

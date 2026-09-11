@@ -9,10 +9,6 @@
     ];
   };
 
-  environment.systemPackages = with pkgs; [
-    lutris
-  ];
-
   environment.sessionVariables = {
     PROTON_ENABLE_WAYLAND = "1";
     PROTON_ENABLE_HDR = "1";
@@ -20,12 +16,12 @@
 
   home-manager.users.bnjlka = {
     programs.lutris = {
+      enable = true;
       protonPackages = [
         pkgs.proton-ge-bin
         pkgs.proton-ge-11-6
       ];
       extraPackages = with pkgs; [
-        umu-launcher
         winetricks
         mangohud
         gamescope
