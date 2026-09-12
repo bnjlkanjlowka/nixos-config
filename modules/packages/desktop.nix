@@ -2,10 +2,6 @@
 
 {
   environment.systemPackages = with pkgs; [
-    zed-editor
-    nixd
-    nil
-    package-version-server
     bluetuith
     feishin
     discord

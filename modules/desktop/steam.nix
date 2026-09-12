@@ -22,6 +22,7 @@
         pkgs.proton-ge-11-6
       ];
       extraPackages = with pkgs; [
+        umu-launcher
         winetricks
         mangohud
         gamescope
