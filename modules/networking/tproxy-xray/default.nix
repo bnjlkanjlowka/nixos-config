@@ -93,6 +93,7 @@ in
       NetworkNamespacePath = "/var/run/netns/proxy";
       TemporaryFileSystem = [
         "/var/run/nscd"
+        "/run/nscd"
       ];
       BindReadOnlyPaths = [
         "/etc/netns/proxy/resolv.conf:/etc/resolv.conf:norbind"
