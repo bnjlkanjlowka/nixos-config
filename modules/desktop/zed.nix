@@ -7,6 +7,7 @@
       extraPackages = [
         pkgs.nil
         pkgs.nixd
+        pkgs.package-version-server
       ];
       extensions = [
         "nix"
