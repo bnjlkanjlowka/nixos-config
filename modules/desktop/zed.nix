@@ -8,6 +8,7 @@
         pkgs.nil
         pkgs.nixd
         pkgs.package-version-server
+        pkgs.nixfmt
       ];
       extensions = [
         "nix"

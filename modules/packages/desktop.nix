@@ -7,7 +7,6 @@
     discord
     spotify
     easyeffects
-    obs-studio
     moonlight-qt
   ];
 
