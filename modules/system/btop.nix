@@ -12,6 +12,10 @@
     capabilities = "cap_perfmon+ep";
   };
 
+  systemd.tmpfiles.rules = [
+    "z /sys/class/powercap/intel-rapl:0/energy_uj 0444 root root - -"
+  ];
+
   home-manager.users.bnjlka = {
     programs.btop = {
       enable = true;
