@@ -5,7 +5,6 @@
     bluetuith
     feishin
     discord
-    spotify
     easyeffects
     moonlight-qt
   ];
