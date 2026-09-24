@@ -15,6 +15,7 @@
     ../../modules/desktop/mpv.nix
     ../../modules/desktop/steam.nix
     ../../modules/desktop/zed.nix
+    ../../modules/desktop/lact.nix
 
     ../../modules/networking
     ../../modules/networking/wireguard.nix
