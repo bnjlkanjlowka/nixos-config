@@ -27,6 +27,7 @@
           "--noprofile"
           "--netns=proxy"
           "--blacklist=/var/run/nscd"
+          "--blacklist=/run/nscd"
         ];
       };
     };
