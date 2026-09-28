@@ -10,6 +10,9 @@ in
   programs.steam = {
     enable = true;
     extraCompatPackages = proton;
+    extraPackages = with pkgs; [
+      mangohud
+    ];
   };
 
   environment.sessionVariables = {
