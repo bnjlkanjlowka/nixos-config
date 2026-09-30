@@ -3,6 +3,7 @@
 let
   proton = with pkgs; [
     proton-ge-11-5
+    proton-ge-11-6
     proton-ge-11-7
   ];
 in
@@ -10,9 +11,6 @@ in
   programs.steam = {
     enable = true;
     extraCompatPackages = proton;
-    extraPackages = with pkgs; [
-      mangohud
-    ];
   };
 
   environment.sessionVariables = {
@@ -28,10 +26,23 @@ in
       extraPackages = with pkgs; [
         umu-launcher
         winetricks
-        mangohud
         gamescope
         gamemode
       ];
+    };
+
+    programs.mangohud = {
+      enable = true;
+      settings = {
+        no_display = true;
+        vram = true;
+        gpu_power = true;
+        cpu_power = true;
+        cpu_temp = true;
+        gpu_temp = true;
+        wine = true;
+        fps_metrics = "0.01,0.001";
+      };
     };
   };
 }
