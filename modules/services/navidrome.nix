@@ -1,11 +1,20 @@
-{ ... }:
+{ config, ... }:
 
 {
+  sops = {
+    secrets.lastfm-keys = {
+      sopsFile = ../../secrets/navidrome/lastfm.env;
+      format = "dotenv";
+    };
+  };
+
   services.navidrome = {
     enable = true;
-    settings.MusicFolder = "/data/music";
-    settings.Address = "0.0.0.0";
-    openFirewall = true;
+    environmentFile = config.sops.secrets.lastfm-keys.path;
+    settings = {
+      MusicFolder = "/data/music";
+      Address = "127.0.0.1";
+    };
   };
 
   users.groups.music = {
