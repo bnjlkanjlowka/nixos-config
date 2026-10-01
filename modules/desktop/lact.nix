@@ -20,7 +20,7 @@
           pmfw_options = {
             zero_rpm = true;
           };
-          power_cap = 280.0;
+          power_cap = 304.0;
           perfomance_level = "auto";
           gpu_clock_offsets = {
             "0" = -50;
