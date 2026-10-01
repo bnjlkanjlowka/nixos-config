@@ -51,6 +51,11 @@
           ./hosts/server/configuration.nix
           home-manager.nixosModules.home-manager
           sops-nix.nixosModules.sops
+          {
+            nixpkgs.overlays = [
+              (import ./overlays/pihole-ftl.nix)
+            ];
+          }
         ];
       };
     };
