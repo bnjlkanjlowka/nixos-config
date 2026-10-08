@@ -52,6 +52,12 @@
             installation_mode = "force_installed";
             updates_disable = true;
           };
+
+          "firefox@betterttv.net" = {
+            install_url = moz "betterttv";
+            installation_mode = "force_installed";
+            updates_disable = true;
+          };
         };
     };
     #for ff2mpv addon firefox
