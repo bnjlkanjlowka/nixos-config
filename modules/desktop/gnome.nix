@@ -15,7 +15,7 @@
     papers
     loupe
     newsflash
-    geary
+    convey
     gnomeExtensions.blur-my-shell
     gnomeExtensions.clipboard-history
     gnomeExtensions.disable-workspace-switcher-overlay
