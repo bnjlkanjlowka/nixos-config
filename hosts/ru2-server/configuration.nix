@@ -68,7 +68,7 @@
 
   nix.buildMachines = [
     {
-      hostName = "builder";
+      hostName = "server";
       system = "x86_64-linux";
       protocol = "ssh-ng";
       maxJobs = 4;

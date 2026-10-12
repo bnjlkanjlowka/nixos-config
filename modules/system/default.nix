@@ -58,6 +58,26 @@
     };
   };
 
+  #ssh client
+  programs.ssh = {
+    extraConfig = ''
+      Host server
+        HostName server.spb.lan
+        User bnjlka
+        Port 1285
+
+      Host ru1-server
+        HostName ru1.ww.bnjlkanjlowka.xyz
+        User bnjlka
+        Port 1285
+
+      Host ru2-server
+        HostName ru2.ww.bnjlkanjlowka.xyz
+        User bnjlka
+        Port 1285
+    '';
+  };
+
   #secrets
   sops = {
     age.sshKeyPaths = [

@@ -52,6 +52,27 @@
     };
   };
 
+  nix.buildMachines = [
+    {
+      hostName = "server";
+      system = "x86_64-linux";
+      protocol = "ssh-ng";
+      maxJobs = 4;
+      speedFactor = 2;
+      supportedFeatures = [
+        "nixos-test"
+        "benchmark"
+        "big-parallel"
+        "kvm"
+      ];
+    }
+  ];
+
+  nix.settings.trusted-users = [
+    "root"
+    "@wheel"
+  ];
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
