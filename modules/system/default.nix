@@ -26,15 +26,6 @@
     nerd-fonts.lilex
   ];
 
-  #pipewire
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
-
   #locale
   time.timeZone = "Europe/Moscow";
 
@@ -72,16 +63,6 @@
     age.sshKeyPaths = [
       "/etc/ssh/ssh_host_ed25519_key"
     ];
-  };
-
-  boot = {
-    #systemd-boot enable
-    loader = {
-      systemd-boot.enable = true;
-      efi.canTouchEfiVariables = true;
-    };
-    #last kernel
-    kernelPackages = pkgs.linuxPackages_latest;
   };
 
   #run0

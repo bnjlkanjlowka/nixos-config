@@ -27,6 +27,8 @@
 
     ../../modules/system
     ../../modules/system/users.nix
+    ../../modules/system/pipewire.nix
+    ../../modules/system/boot/systemd-boot.nix
 
     ../../modules/packages
 
@@ -77,11 +79,10 @@
     };
   };
 
-  #for nginx
-  security.acme = {
-    acceptTerms = true;
-    defaults.email = "dolwans12@gmail.com";
-  };
+  nix.settings.trusted-users = [
+    "root"
+    "@wheel"
+  ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

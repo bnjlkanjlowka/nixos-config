@@ -22,6 +22,8 @@
 
     ../../modules/system
     ../../modules/system/users.nix
+    ../../modules/system/pipewire.nix
+    ../../modules/system/boot/systemd-boot.nix
 
     ../../modules/packages
     ../../modules/packages/desktop.nix
