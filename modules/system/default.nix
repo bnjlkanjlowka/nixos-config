@@ -62,7 +62,7 @@
   programs.ssh = {
     extraConfig = ''
       Host server
-        HostName server.spb.lan
+        HostName bnjlkanjlowka.xyz
         User bnjlka
         Port 1285
 
