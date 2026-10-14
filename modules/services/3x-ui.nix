@@ -15,7 +15,7 @@ in
 
   # Containers
   virtualisation.oci-containers.containers."3xui_app" = {
-    image = "ghcr.io/mhsanaei/3x-ui:v3.9.0";
+    image = "ghcr.io/mhsanaei/3x-ui:v3.10.2";
     environment = {
       "XRAY_VMESS_AEAD_FORCED" = "false";
       "XUI_ENABLE_FAIL2BAN" = "true";

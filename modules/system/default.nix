@@ -75,6 +75,11 @@
         HostName ru2.ww.bnjlkanjlowka.xyz
         User bnjlka
         Port 1285
+
+      Host usa1-server
+        HostName usa1.ww.bnjlkanjlowka.xyz
+        User bnjlka
+        Port 1285
     '';
   };
 
