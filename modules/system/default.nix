@@ -90,6 +90,11 @@
         HostName uk1.ww.bnjlkanjlowka.xyz
         User bnjlka
         Port 1285
+
+      Host gr1-server
+        HostName gr1.ww.bnjlkanjlowka.xyz
+        User bnjlka
+        Port 1285
     '';
   };
 
