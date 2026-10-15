@@ -85,5 +85,14 @@
           sops-nix.nixosModules.sops
         ];
       };
+
+      nixosConfigurations.nl1-server = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/nl1-server/configuration.nix
+          home-manager.nixosModules.home-manager
+          sops-nix.nixosModules.sops
+        ];
+      };
     };
 }
