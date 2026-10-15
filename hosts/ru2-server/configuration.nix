@@ -31,14 +31,14 @@
     enable = true;
     networks = {
       "10-wired" = {
-        matchConfig.Name = "eth0";
+        matchConfig.Name = "ens3";
         address = [
           "78.40.217.35/24"
-          "2a03:6f01:1:2::1:efd4/118"
+          "2a03:6f01:1:2::1:efd4/64"
         ];
         gateway = [
           "78.40.217.1"
-          "2a03:6f01:1:2::1:1"
+          "2a03:6f01:1:2::1"
         ];
         dns = [
           "1.1.1.1"
