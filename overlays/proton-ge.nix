@@ -52,4 +52,22 @@
       };
     }
   );
+
+  proton-ge-11-10 = prev.proton-ge-bin.overrideAttrs (
+    new: old: {
+      steamDisplayName = "GE-Proton11-10";
+      pname = "proton-ge-11-10";
+      version = "GE-Proton11-10";
+
+      passthru.variants = old.passthru.variants // {
+        "x86_64-linux" = {
+          toolName = "${new.version}-x86_64";
+          src = final.fetchzip {
+            url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${new.version}/${new.version}-x86_64.tar.gz";
+            hash = "sha256-pR0MFuBcjr1RZOCJ9aDyWvadGDcXfpZt7loFSNFjWuU=";
+          };
+        };
+      };
+    }
+  );
 })

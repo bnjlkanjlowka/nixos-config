@@ -5,6 +5,7 @@ let
     proton-ge-11-5
     proton-ge-11-6
     proton-ge-11-7
+    proton-ge-11-10
   ];
 in
 {
@@ -15,7 +16,6 @@ in
 
   environment.sessionVariables = {
     PROTON_ENABLE_WAYLAND = "1";
-    PROTON_ENABLE_HDR = "1";
     PROTON_FSR4_UPGRADE = "1";
   };
 
