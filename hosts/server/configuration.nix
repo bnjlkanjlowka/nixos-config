@@ -9,6 +9,8 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
 
+    ./modules/3x-ui.nix
+
     ../../modules/desktop/mpv.nix
 
     ../../modules/services/pihole.nix
