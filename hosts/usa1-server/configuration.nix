@@ -17,6 +17,8 @@
     ../../modules/system/boot/grub.nix
     ../../modules/system/auto-upgrade.nix
 
+    ../../modules/networking
+
     ../../modules/packages
 
     ../../modules/git.nix

@@ -16,6 +16,8 @@
     ../../modules/desktop/zed.nix
 
     ../../modules/networking
+    ../../modules/networking/xray.nix
+    ../../modules/networking/tproxy-xray
     ../../modules/networking/wireguard.nix
 
     ../../modules/system

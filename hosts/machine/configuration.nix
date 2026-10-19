@@ -18,6 +18,8 @@
     ../../modules/desktop/lact.nix
 
     ../../modules/networking
+    ../../modules/networking/xray.nix
+    ../../modules/networking/tproxy-xray
     ../../modules/networking/wireguard.nix
 
     ../../modules/system

@@ -17,6 +17,8 @@
     ../../modules/system/boot/grub.nix
     ../../modules/system/auto-upgrade.nix
 
+    ../../modules/networking
+
     ../../modules/packages
 
     ../../modules/git.nix
@@ -86,6 +88,10 @@
     "root"
     "@wheel"
   ];
+
+  networking.firewall.extraInputRules = ''
+    ip saddr 185.73.23.0/24 drop
+  '';
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
