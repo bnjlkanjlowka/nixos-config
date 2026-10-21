@@ -5,9 +5,7 @@
     enable = true;
     user = "bnjlka";
     settings = {
-      rpc-bind-address = "0.0.0.0";
-      rpc-whitelist = "127.0.0.1,192.168.*.*,10.0.10.*";
-      rpc-host-whitelist = "server*";
+      rpc-host-whitelist = "torrent*";
 
       download-dir = "/data";
       incomplete-dir-enabled = false;
@@ -20,7 +18,22 @@
       proxy-url = "socks5://localhost:1080";
     };
 
-    openRPCPort = true;
     openPeerPorts = true;
+  };
+
+  services.nginx = {
+    virtualHosts."torrent" = {
+      serverAliases = [
+        "torrent.spb.lan"
+      ];
+
+      enableACME = true;
+      forceSSL = true;
+
+      locations."/" = {
+        proxyPass = "http://127.0.0.1:9091";
+        recommendedProxySettings = true;
+      };
+    };
   };
 }

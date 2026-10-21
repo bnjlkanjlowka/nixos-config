@@ -13,6 +13,10 @@
             "true,10.0.10.0/24,192.168.30.1,wg"
           ];
           listeningMode = "ALL";
+
+          hosts = [
+            "192.168.30.112 torrent.spb.lan"
+          ];
         };
       };
 
