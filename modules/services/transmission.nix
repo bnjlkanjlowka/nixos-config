@@ -22,13 +22,10 @@
   };
 
   services.nginx = {
-    virtualHosts."torrent" = {
+    virtualHosts."torrent.spb.lan" = {
       serverAliases = [
-        "torrent.spb.lan"
+        "torrent"
       ];
-
-      enableACME = true;
-      forceSSL = true;
 
       locations."/" = {
         proxyPass = "http://127.0.0.1:9091";
