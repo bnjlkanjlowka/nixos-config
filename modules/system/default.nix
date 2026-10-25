@@ -95,6 +95,11 @@
         HostName gr1.ww.bnjlkanjlowka.xyz
         User bnjlka
         Port 1285
+
+      Host router
+        HostName 192.168.30.1
+        User bnjlka
+        Port 1285
     '';
   };
 
