@@ -60,7 +60,7 @@
   };
 
   fileSystems."/data" = {
-    device = "bnjlka@server:/data";
+    device = "server:/data";
     fsType = "sshfs";
     options = [
       "_netdev"
@@ -69,7 +69,6 @@
       "x-systemd.mount-timeout=5s"
       "IdentityFile=/home/bnjlka/.ssh/id_ed25519"
       "allow_other"
-      "port=1285"
     ];
   };
 
