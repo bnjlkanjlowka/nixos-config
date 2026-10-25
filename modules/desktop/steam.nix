@@ -12,6 +12,7 @@ in
   programs.steam = {
     enable = true;
     extraCompatPackages = proton;
+    package = pkgs.millennium-steam;
   };
 
   environment.sessionVariables = {

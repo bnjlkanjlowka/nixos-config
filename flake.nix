@@ -6,6 +6,7 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
   };
 
   outputs =
@@ -13,6 +14,7 @@
       nixpkgs,
       home-manager,
       sops-nix,
+      millennium,
       ...
     }:
     {
@@ -40,6 +42,7 @@
             nixpkgs.overlays = [
               (import ./overlays/mpris-label.nix)
               (import ./overlays/proton-ge.nix)
+              millennium.overlays.default
             ];
           }
         ];
