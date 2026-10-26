@@ -115,5 +115,14 @@
           sops-nix.nixosModules.sops
         ];
       };
+
+      nixosConfigurations.router = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/router/configuration.nix
+          home-manager.nixosModules.home-manager
+          sops-nix.nixosModules.sops
+        ];
+      };
     };
 }
