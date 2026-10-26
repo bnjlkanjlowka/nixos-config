@@ -37,6 +37,11 @@
           proto = "tcp";
           sourcePort = 51413;
         }
+        {
+          destination = "192.168.30.112:51413";
+          proto = "udp";
+          sourcePort = 51413;
+        }
 
         #3x-ui
         {
@@ -68,6 +73,7 @@
         51413
         20053
       ];
+      allowedUDPPorts = [ 51413 ];
     };
   };
 }
