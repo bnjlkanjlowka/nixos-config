@@ -4,7 +4,7 @@
   services.dnsmasq = {
     enable = true;
     settings = {
-      interface = "ens18";
+      interface = "lan0";
       bind-interfaces = true;
 
       dhcp-range = [ "192.168.30.100,192.168.30.199,12h" ];
@@ -47,7 +47,7 @@
     };
   };
 
-  networking.firewall.interfaces."ens18" = {
+  networking.firewall.interfaces."lan0" = {
     allowedUDPPorts = [
       53
       67

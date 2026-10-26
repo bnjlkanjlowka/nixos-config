@@ -15,7 +15,7 @@
     ];
   };
 
-  networking.firewall.interfaces."ens18" = {
+  networking.firewall.interfaces."lan0" = {
     allowedUDPPorts = [ 123 ];
   };
 }

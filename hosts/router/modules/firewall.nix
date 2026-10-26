@@ -6,9 +6,9 @@
 
     nat = {
       enable = true;
-      externalInterface = "ens19";
+      externalInterface = "wan0";
       internalInterfaces = [
-        "ens18"
+        "lan0"
         "wg0"
       ];
 

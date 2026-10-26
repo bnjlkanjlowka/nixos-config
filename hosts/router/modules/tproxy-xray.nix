@@ -2,10 +2,10 @@
 
 {
   networking.firewall.extraInputRules = ''
-    iifname { "ens18", "wg0" } meta mark 1 accept
+    iifname { "lan0", "wg0" } meta mark 1 accept
   '';
 
-  networking.firewall.interfaces."ens18" = {
+  networking.firewall.interfaces."lan0" = {
     allowedTCPPorts = [ 1090 ];
     allowedUDPPorts = [ 1090 ];
   };
@@ -21,7 +21,7 @@
 
             meta mark 2 accept;
 
-            meta l4proto { tcp, udp } oifname ens19 meta mark set 1 accept;
+            meta l4proto { tcp, udp } oifname wan0 meta mark set 1 accept;
           }
 
           chain prerouting {
@@ -29,7 +29,7 @@
 
             ct direction reply accept;
 
-            meta l4proto { tcp, udp } fib daddr oifname ens19 iifname { ens18, wg0 } meta mark set 1 tproxy to :12345 accept;
+            meta l4proto { tcp, udp } fib daddr oifname wan0 iifname { lan0, wg0 } meta mark set 1 tproxy to :12345 accept;
 
             meta l4proto { tcp, udp } meta mark 1 tproxy to :12345 accept;
           }
@@ -76,8 +76,8 @@
   boot.kernel.sysctl = {
     "net.ipv4.conf.all.rp_filter" = 0;
     "net.ipv4.conf.default.rp_filter" = 0;
-    "net.ipv4.conf.ens18.rp_filter" = 0;
-    "net.ipv4.conf.ens19.rp_filter" = 0;
+    "net.ipv4.conf.lan0.rp_filter" = 0;
+    "net.ipv4.conf.wan0.rp_filter" = 0;
   };
 
   networking.firewall.checkReversePath = false;
