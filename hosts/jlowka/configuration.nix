@@ -54,6 +54,8 @@
     };
   };
 
+  nix.distributedBuilds = true;
+
   nix.buildMachines = [
     {
       hostName = "server";
