@@ -49,6 +49,7 @@
         networkConfig = {
           DHCP = "yes";
           IPv6AcceptRA = true;
+          IPv6PrivacyExtensions = true;
         };
         dhcpV4Config = {
           UseDNS = true;
