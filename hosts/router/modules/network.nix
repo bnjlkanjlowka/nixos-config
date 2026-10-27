@@ -30,6 +30,7 @@
         matchConfig.Name = "lan0";
         address = [
           "192.168.30.1/24"
+          "fd00:30::1/64"
         ];
 
         networkConfig = {
@@ -44,6 +45,18 @@
           SubnetId = "auto";
           Announce = "yes";
         };
+
+        ipv6SendRAConfig = {
+          EmitDNS = true;
+          DNS = "_link_local";
+        };
+
+        ipv6Prefixes = [
+          {
+            AddressAutoconfiguration = true;
+            Prefix = "fd00:30::/64";
+          }
+        ];
       };
     };
   };

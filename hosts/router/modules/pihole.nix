@@ -18,9 +18,13 @@
 
           hosts = [
             "192.168.30.112 server.spb.lan"
+            "fd00:30::2 server.spb.lan"
+
             "192.168.30.112 torrent.spb.lan"
+            "fd00:30::2 torrent.spb.lan"
 
             "192.168.30.1 dns.spb.lan"
+            "fd00:30::1 dns.spb.lan"
           ];
 
           piholePTR = "HOSTNAMEFQDN";

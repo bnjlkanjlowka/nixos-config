@@ -46,6 +46,10 @@
     networks = {
       "10-wired" = {
         matchConfig.Name = "ens18";
+        address = [
+          "fd00:30::2/64"
+          "2a05:3580:fe47:e700::30:2/64"
+        ];
         networkConfig = {
           DHCP = "yes";
           IPv6AcceptRA = true;
