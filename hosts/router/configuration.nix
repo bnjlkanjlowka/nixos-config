@@ -9,12 +9,14 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
 
-    ./modules/dnsmasq.nix
     ./modules/firewall.nix
     ./modules/network.nix
     ./modules/tproxy-xray.nix
     ./modules/wireguard.nix
-    ./modules/ntp.nix
+    ./modules/pihole.nix
+    ./modules/unbound.nix
+
+    ../../modules/services/nginx.nix
 
     ../../modules/system
     ../../modules/system/users.nix

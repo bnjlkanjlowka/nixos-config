@@ -24,7 +24,7 @@
     };
   };
 
-  networking.firewall = {
+  networking.firewall.interfaces."lan0" = {
     allowedTCPPorts = [ 5353 ];
     allowedUDPPorts = [ 5353 ];
   };

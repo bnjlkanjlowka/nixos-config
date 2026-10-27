@@ -13,8 +13,6 @@
 
     ../../modules/desktop/mpv.nix
 
-    ../../modules/services/pihole.nix
-    ../../modules/services/unbound.nix
     ../../modules/services/navidrome.nix
     ../../modules/services/immich.nix
     ../../modules/services/nginx.nix
@@ -57,13 +55,6 @@
           UseDomains = true;
         };
       };
-    };
-  };
-
-  services.resolved = {
-    enable = lib.mkForce false;
-    settings.Resolve = {
-      DNSStubListener = "no";
     };
   };
 
