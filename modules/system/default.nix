@@ -115,4 +115,9 @@
     enable = true;
     wheelNeedsPassword = false;
   };
+
+  #zswap
+  boot.zswap = {
+    enable = true;
+  };
 }
