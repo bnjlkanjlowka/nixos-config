@@ -1,6 +1,7 @@
 (final: prev: {
   proton-ge-11-5 = prev.proton-ge-bin.overrideAttrs (
     new: old: {
+      __intentionallyOverridingVersion = true;
       steamDisplayName = "GE-Proton11-5";
       pname = "proton-ge-11-5";
       version = "GE-Proton11-5";
@@ -19,6 +20,7 @@
 
   proton-ge-11-6 = prev.proton-ge-bin.overrideAttrs (
     new: old: {
+      __intentionallyOverridingVersion = true;
       steamDisplayName = "GE-Proton11-6";
       pname = "proton-ge-11-6";
       version = "GE-Proton11-6";
@@ -37,6 +39,7 @@
 
   proton-ge-11-7 = prev.proton-ge-bin.overrideAttrs (
     new: old: {
+      __intentionallyOverridingVersion = true;
       steamDisplayName = "GE-Proton11-7";
       pname = "proton-ge-11-7";
       version = "GE-Proton11-7";
@@ -55,6 +58,7 @@
 
   proton-ge-11-10 = prev.proton-ge-bin.overrideAttrs (
     new: old: {
+      __intentionallyOverridingVersion = true;
       steamDisplayName = "GE-Proton11-10";
       pname = "proton-ge-11-10";
       version = "GE-Proton11-10";
