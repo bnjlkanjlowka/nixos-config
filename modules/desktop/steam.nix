@@ -6,6 +6,7 @@ let
     proton-ge-11-6
     proton-ge-11-7
     proton-ge-11-10
+    proton-ge-11-11
   ];
 in
 {
