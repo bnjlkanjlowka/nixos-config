@@ -16,6 +16,7 @@
           ];
           font-name = "Adwaita Mono 14";
           use-system-font = false;
+          restore-session = false;
         };
         "org/gnome/Ptyxis/Profiles/f294612757ce57fc1cfb5e3a6a93e100" = {
           opacity = "1.0";
