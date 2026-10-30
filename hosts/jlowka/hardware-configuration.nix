@@ -23,6 +23,7 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
+  boot.supportedFilesystems = [ "nfs" ];
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/fa72505a-caba-4c2a-9ba3-682239b8acbe";
@@ -54,6 +55,17 @@
     options = [
       "fmask=0077"
       "dmask=0077"
+    ];
+  };
+
+  fileSystems."/home/bnjlka/smth/nixos-config" = {
+    device = "server.spb.lan:/nixos-config";
+    fsType = "nfs4";
+    options = [
+      "_netdev"
+      "nofail"
+      "x-systemd.automount"
+      "x-systemd.mount-timeout=5s"
     ];
   };
 

@@ -8,7 +8,7 @@
     displayManager = {
       gdm.enable = true;
       autoLogin = {
-        enable = true;
+        enable = false;
         user = "bnjlka";
       };
     };
@@ -30,7 +30,6 @@
     gnomeExtensions.brightness-restore
     gnomeExtensions.just-perfection
     gnomeExtensions.mpris-label
-    gnomeExtensions.hibernate-power-menu
   ];
 
   home-manager.users.bnjlka = { lib, ... }: {
@@ -65,7 +64,6 @@
             brightness-restore.extensionUuid
             just-perfection.extensionUuid
             mpris-label.extensionUuid
-            hibernate-power-menu.extensionUuid
           ];
           favorite-apps = [
             "firefox.desktop"

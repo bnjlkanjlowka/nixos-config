@@ -60,15 +60,24 @@
   };
 
   fileSystems."/data" = {
-    device = "server:/data";
-    fsType = "sshfs";
+    device = "server.spb.lan:/data";
+    fsType = "nfs4";
     options = [
       "_netdev"
       "nofail"
       "x-systemd.automount"
       "x-systemd.mount-timeout=5s"
-      "IdentityFile=/home/bnjlka/.ssh/id_ed25519"
-      "allow_other"
+    ];
+  };
+
+  fileSystems."/home/bnjlka/smth/nixos-config" = {
+    device = "server.spb.lan:/nixos-config";
+    fsType = "nfs4";
+    options = [
+      "_netdev"
+      "nofail"
+      "x-systemd.automount"
+      "x-systemd.mount-timeout=5s"
     ];
   };
 

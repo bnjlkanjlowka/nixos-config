@@ -16,6 +16,9 @@
       speed-limit-up = 1000;
 
       proxy-url = "socks5://localhost:1080";
+
+      port_forwarding_enabled = false;
+      bind_address_ipv6 = "2a05:3580:fe47:e700::30:2";
     };
 
     openPeerPorts = true;

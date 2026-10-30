@@ -10,6 +10,7 @@
     ./hardware-configuration.nix
 
     ./modules/3x-ui.nix
+    ./modules/nfs.nix
 
     ../../modules/desktop/mpv.nix
 
@@ -22,6 +23,7 @@
     ../../modules/services/miniflux.nix
     ../../modules/services/rss-bridge.nix
     ../../modules/services/radicale.nix
+    ../../modules/services/gtnh.nix
 
     ../../modules/networking
     ../../modules/networking/xray.nix

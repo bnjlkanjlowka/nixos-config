@@ -6,7 +6,7 @@
     feishin
     discord
     easyeffects
-    moonlight-qt
+    prismlauncher
   ];
 
   programs.obs-studio = {

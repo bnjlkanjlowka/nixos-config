@@ -28,18 +28,27 @@
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/aaf8b686-1791-4704-8ada-3cc17160d5e5";
     fsType = "btrfs";
+    options = [
+      "compress=zstd:3"
+    ];
   };
 
   fileSystems."/nix" = {
-    device = "/dev/disk/by-uuid/aaf8b686-1791-4704-8ada-3cc17160d5e5";
+    device = "/dev/disk/by-uuid/b6bce9f1-3c6c-41a1-a9ff-11ce3832be95";
     fsType = "btrfs";
-    options = [ "subvol=nix" ];
+    options = [
+      "subvol=nix"
+      "compress=zstd:3"
+    ];
   };
 
   fileSystems."/home" = {
     device = "/dev/disk/by-uuid/aaf8b686-1791-4704-8ada-3cc17160d5e5";
     fsType = "btrfs";
-    options = [ "subvol=home" ];
+    options = [
+      "subvol=home"
+      "compress=zstd:3"
+    ];
   };
 
   fileSystems."/boot" = {
@@ -52,7 +61,7 @@
   };
 
   fileSystems."/data" = {
-    device = "dev/disk/by-uuid/11335ae9-ebd2-4e04-b3ea-18c2217cb1e2";
+    device = "/dev/disk/by-uuid/11335ae9-ebd2-4e04-b3ea-18c2217cb1e2";
     fsType = "btrfs";
     options = [
       "compress=zstd:3"
@@ -60,7 +69,32 @@
     ];
   };
 
-  swapDevices = [ ];
+  fileSystems."/opt/gtnh" = {
+    device = "/dev/disk/by-uuid/b6bce9f1-3c6c-41a1-a9ff-11ce3832be95";
+    fsType = "btrfs";
+    options = [
+      "compress=zstd:3"
+      "subvol=gtnh"
+    ];
+  };
+
+  fileSystems."/export/data" = {
+    device = "/data";
+    fsType = "none";
+    options = [ "bind" ];
+  };
+
+  fileSystems."/export/nixos-config" = {
+    device = "/home/bnjlka/smth/nixos-config";
+    fsType = "none";
+    options = [ "bind" ];
+  };
+
+  swapDevices = [
+    {
+      device = "/dev/disk/by-uuid/9960c888-03d4-4483-af7b-829d88f0e6e1";
+    }
+  ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 }
