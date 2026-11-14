@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   home-manager.users.bnjlka = {
@@ -11,13 +11,23 @@
       scripts = [
         pkgs.mpvScripts.mpris
       ];
+
+      config = {
+        alang = "en,ru";
+        slang = "ru";
+        ytdl-format =
+          if config.networking.hostName == "jlowka" then
+            "bestvideo[height=1080][vcodec*=avc1]+bestaudio"
+          else
+            "best";
+      };
     };
 
     programs.yt-dlp = {
       enable = true;
       settings = {
         proxy = "socks5://127.0.0.1:1082";
-        cookies = "/home/bnjlka/.config/yt-dlp/cookies.txt";
+        cookies-from-browser = "firefox";
       };
     };
   };

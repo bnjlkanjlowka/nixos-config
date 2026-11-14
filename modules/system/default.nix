@@ -62,42 +62,42 @@
   programs.ssh = {
     extraConfig = ''
       Host server
-        HostName bnjlkanjlowka.xyz
+        HostName server.spb.lan
         User bnjlka
         Port 1285
 
       Host ru1-server
-        HostName ru1.ww.bnjlkanjlowka.xyz
+        HostName ru1-server.wg.lan
         User bnjlka
         Port 1285
 
       Host ru2-server
-        HostName ru2.ww.bnjlkanjlowka.xyz
+        HostName ru2-server.wg.lan
         User bnjlka
         Port 1285
 
       Host usa1-server
-        HostName usa1.ww.bnjlkanjlowka.xyz
+        HostName usa1-server.wg.lan
         User bnjlka
         Port 1285
 
       Host nl1-server
-        HostName nl1.ww.bnjlkanjlowka.xyz
+        HostName nl1-server.wg.lan
         User bnjlka
         Port 1285
 
       Host uk1-server
-        HostName uk1.ww.bnjlkanjlowka.xyz
+        HostName uk1-server.wg.lan
         User bnjlka
         Port 1285
 
       Host gr1-server
-        HostName gr1.ww.bnjlkanjlowka.xyz
+        HostName gr1-server.wg.lan
         User bnjlka
         Port 1285
 
       Host router
-        HostName 192.168.30.1
+        HostName router.spb.lan
         User bnjlka
         Port 1285
     '';
@@ -120,4 +120,6 @@
   boot.zswap = {
     enable = true;
   };
+
+  services.kmscon.enable = true;
 }

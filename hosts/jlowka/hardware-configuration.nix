@@ -66,6 +66,19 @@
       "nofail"
       "x-systemd.automount"
       "x-systemd.mount-timeout=5s"
+      "x-systemd.requires=NetworkManager.service"
+    ];
+  };
+
+  fileSystems."/data" = {
+    device = "server.spb.lan:/data";
+    fsType = "nfs4";
+    options = [
+      "_netdev"
+      "nofail"
+      "x-systemd.automount"
+      "x-systemd.mount-timeout=10s"
+      "x-systemd.requires=NetworkManager.service"
     ];
   };
 

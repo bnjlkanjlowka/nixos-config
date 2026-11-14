@@ -9,5 +9,7 @@
       "--build-host"
       "server"
     ];
+    fixedRandomDelay = true;
+    randomizedDelaySec = "10min";
   };
 }

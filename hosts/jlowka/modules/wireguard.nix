@@ -3,7 +3,7 @@
 {
   sops = {
     secrets.wg-peer-private-key = {
-      sopsFile = ../../secrets/wireguard/peer.env;
+      sopsFile = ../../../secrets/wireguard/peer.env;
       format = "dotenv";
     };
   };
@@ -16,7 +16,7 @@
           id = "home-wg";
           type = "wireguard";
           interface-name = "wg0";
-          autoconnect = false;
+          autoconnect = true;
         };
 
         wireguard = {
@@ -25,18 +25,20 @@
 
         ipv4 = {
           method = "manual";
-          addresses = "10.0.10.2/24";
-          dns = "192.168.10.115;192.168.20.1";
-          dns-search = "~home.lan";
+          addresses = "10.0.10.2/32";
+          dns = "192.168.30.1";
         };
 
         ipv6 = {
-          method = "disabled";
+          method = "manual";
+          address1 = "2a05:3580:fe47:e701::2/128";
+          address2 = "fd00:130::2/128";
+          dns = "fd00:30::1";
         };
-
-        "wireguard-peer.RhjVjUmN9ZMk+FciEOzLbMTNFhgs4WVEA2YI+pXOjHY=" = {
-          endpoint = "79.111.156.73:49833";
-          allowed-ips = "192.168.10.0/24;192.168.20.0/24;10.0.10.0/24";
+        #spb
+        "wireguard-peer.4+TpdRwQgNlMiS5lddRHrpMX9VAVzP2zmgLbVCC5LFc=" = {
+          endpoint = "188.243.72.107:48783";
+          allowed-ips = "0.0.0.0/0;::/0";
         };
       };
     };

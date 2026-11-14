@@ -9,6 +9,8 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
 
+    ./modules/wireguard.nix
+
     ../../modules/services/3x-ui.nix
     ../../modules/services/nginx.nix
 
@@ -36,7 +38,7 @@
         matchConfig.Name = "ens18";
         address = [
           "46.17.45.80/24"
-          "2a00:b700::27e/118"
+          "2a00:b700::27e/64"
         ];
         gateway = [
           "46.17.45.1"

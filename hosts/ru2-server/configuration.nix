@@ -9,6 +9,8 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
 
+    ./modules/wireguard.nix
+
     ../../modules/services/3x-ui.nix
     ../../modules/services/nginx.nix
 
@@ -37,6 +39,7 @@
         address = [
           "78.40.217.35/24"
           "2a03:6f01:1:2::1:efd4/64"
+          "2a03:6f01:1:2::4e2e/64"
         ];
         gateway = [
           "78.40.217.1"

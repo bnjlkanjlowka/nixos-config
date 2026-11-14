@@ -19,7 +19,6 @@
     ../../modules/networking
     ../../modules/networking/xray.nix
     ../../modules/networking/tproxy-xray
-    ../../modules/networking/wireguard.nix
 
     ../../modules/system
     ../../modules/system/users.nix

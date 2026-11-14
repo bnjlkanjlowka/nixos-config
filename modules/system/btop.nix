@@ -22,6 +22,7 @@
       settings = {
         update_ms = 100;
         disks_filter = "/ /boot /data";
+        proc_per_core = true;
       };
     };
   };

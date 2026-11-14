@@ -47,5 +47,10 @@
       version = "GE-Proton11-11";
       hash = "sha256-3tVgf83IkteFtVo/bHd4yG1xCtPeuW8FXaTrHOLjvKQ=";
     };
+
+    proton-ge-11-12 = mk_proton-ge {
+      version = "GE-Proton11-12";
+      hash = "sha256-i20g9lDz7bR0SXWmvHZHztN4m8AHkcD0/OVGSC4ZzI8=";
+    };
   }
 )

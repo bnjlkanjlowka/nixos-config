@@ -13,7 +13,7 @@
       speed-limit-down-enabled = true;
       speed-limit-down = 6000;
       speed-limit-up-enabled = true;
-      speed-limit-up = 1000;
+      speed-limit-up = 2000;
 
       proxy-url = "socks5://localhost:1080";
 

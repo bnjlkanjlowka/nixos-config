@@ -62,16 +62,6 @@
             "188.243.72.107"
           ];
         }
-
-        #minecraft gtnh server
-        {
-          destination = "192.168.30.112:14228";
-          proto = "tcp";
-          sourcePort = 14228;
-          loopbackIPs = [
-            "188.243.72.107"
-          ];
-        }
       ];
     };
 
@@ -81,6 +71,10 @@
       extraForwardRules = ''
         iifname wan0 oifname { lan0, wg0 } ip6 daddr 2a05:3580:fe47:e700::30:2 tcp dport @tcp_ports_server accept
         iifname wan0 oifname { lan0, wg0 } ip6 daddr 2a05:3580:fe47:e700::30:2 udp dport @udp_ports_server accept
+
+        iifname wg0 oifname { lan0, wan0, wg0 } accept comment "allow wireguard to lan, wan, other wg clients"
+
+        iifname lan0 oifname wg0 accept comment "allow lan to wireguard"
       '';
     };
   };
@@ -94,7 +88,6 @@
         20053, #3x-ui
         51413, #transmission
         1285, #ssh
-        14228 #minecraft gtnh server
       }
     }
 

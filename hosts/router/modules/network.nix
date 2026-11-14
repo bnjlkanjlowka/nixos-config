@@ -31,6 +31,7 @@
         address = [
           "192.168.30.1/24"
           "fd00:30::1/64"
+          "2a05:3580:fe47:e700::30:1/64"
         ];
 
         networkConfig = {
@@ -38,6 +39,7 @@
           IPv6SendRA = true;
           DHCPPrefixDelegation = true;
           IPv6AcceptRA = false;
+          IPv6PrivacyExtensions = true;
         };
 
         dhcpPrefixDelegationConfig = {

@@ -1,0 +1,9 @@
+(final: prev: {
+  gnomeExtensions = prev.gnomeExtensions // {
+    quick-settings-audio-panel = prev.gnomeExtensions.quick-settings-audio-panel.override {
+      version = 106;
+      sha256 = "sha256-N5GFx5vfJqS+4YJ5PLNw5yXb0B5PPWHPkG8ZJ3n+yfY=";
+      metadata = "ewogICJfZ2VuZXJhdGVkIjogIkdlbmVyYXRlZCBieSBTd2VldFRvb3RoLCBkbyBub3QgZWRpdCIsCiAgImRlc2NyaXB0aW9uIjogIkNyZWF0ZSBhIG5ldyBwYW5lbCBjb250YWluaW5nIHZvbHVtZXMgYW5kIG1lZGlhIGNvbnRyb2wgaW4gdGhlIHF1aWNrIHNldHRpbmdzIiwKICAiZ2V0dGV4dC1kb21haW4iOiAicXVpY2stc2V0dGluZ3MtYXVkaW8tcGFuZWxAcmF5emVxLmdpdGh1Yi5pbyIsCiAgIm5hbWUiOiAiUXVpY2sgU2V0dGluZ3MgQXVkaW8gUGFuZWwiLAogICJzZXR0aW5ncy1zY2hlbWEiOiAib3JnLmdub21lLnNoZWxsLmV4dGVuc2lvbnMucXVpY2stc2V0dGluZ3MtYXVkaW8tcGFuZWwiLAogICJzaGVsbC12ZXJzaW9uIjogWwogICAgIjUxIgogIF0sCiAgInVybCI6ICJodHRwczovL2dpdGh1Yi5jb20vUmF5emVxL3F1aWNrLXNldHRpbmdzLWF1ZGlvLXBhbmVsIiwKICAidXVpZCI6ICJxdWljay1zZXR0aW5ncy1hdWRpby1wYW5lbEByYXl6ZXEuZ2l0aHViLmlvIiwKICAidmVyc2lvbiI6IDEwNgp9Cg==";
+    };
+  };
+})

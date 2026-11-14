@@ -25,9 +25,20 @@
 
             "192.168.30.1 dns.spb.lan"
             "fd00:30::1 dns.spb.lan"
+
+            "192.168.30.104 proxmox.spb.lan"
+            "fd00:30::4 proxmox.spb.lan"
+
+            "fd00:130::20 ru2-server.wg.lan"
+            "fd00:130::21 ru1-server.wg.lan"
+            "fd00:130::22 gr1-server.wg.lan"
+            "fd00:130::23 nl1-server.wg.lan"
+            "fd00:130::24 uk1-server.wg.lan"
+            "fd00:130::25 usa1-server.wg.lan"
           ];
 
           piholePTR = "HOSTNAMEFQDN";
+          ignoreLocalhost = true;
         };
 
         dhcp = {
@@ -75,6 +86,7 @@
     pihole-web = {
       enable = true;
       ports = [ "8080" ];
+      hostName = "dns.spb.lan";
     };
   };
 

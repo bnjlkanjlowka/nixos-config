@@ -3,6 +3,12 @@ keys:
   - &machine age1k893et6ycvca547hy9anzlzqsw46ge6r679s93n8w8ajyew0p37q2tjs8s
   - &server age1w6r0yspn0j4t7my0xn26r8888r6v8vdh9ry88jee77rmzl3ktg3smrn69w
   - &router age1dgf9ys57u0kewvxs3u680ckd2wuj9g8mey50fnrs8m53724lrguq45jl7e
+  - &ru2-server age1cqshz9amyptxjzflpufdmchql6dlh48kugz99yfwdl2sue7c848qzqr48v
+  - &ru1-server age1tx6eshsze7gkk7eaf5623wxk04fax64mh78g3ca5ezvkmgdxpq7qal0cyx
+  - &gr1-server age16gswd4qqdpf0tlzgttum5zch84luccsvzs5s0g67s9sztx97yezs8l7qv8
+  - &nl1-server age1pxvc3gy6jh94vvhkdrxuns7h3j2mus5c3pcfjk499waukcwyhpcqgkn033
+  - &uk1-server age1ef8xre5tknaple92eq60mw0fvrf57hy3lhylnhkegaha2ncyl59qjzwwas
+  - &usa1-server age1nh4lts952s7ny7f5z2xjl06a3w5cr723nnjc4t4r5ye9ykenqskqrcygnu
 creation_rules:
   - path_regex: secrets.*/.*
     key_groups:
@@ -11,3 +17,9 @@ creation_rules:
           - *machine
           - *server
           - *router
+          - *ru2-server
+          - *ru1-server
+          - *gr1-server
+          - *nl1-server
+          - *uk1-server
+          - *usa1-server

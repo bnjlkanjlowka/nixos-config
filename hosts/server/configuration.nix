@@ -11,6 +11,7 @@
 
     ./modules/3x-ui.nix
     ./modules/nfs.nix
+    ./modules/snapper.nix
 
     ../../modules/desktop/mpv.nix
 

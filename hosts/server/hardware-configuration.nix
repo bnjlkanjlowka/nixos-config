@@ -78,6 +78,24 @@
     ];
   };
 
+  fileSystems."/opt/gtnh/backups" = {
+    device = "/dev/disk/by-uuid/b6bce9f1-3c6c-41a1-a9ff-11ce3832be95";
+    fsType = "btrfs";
+    options = [
+      "compress=zstd:3"
+      "subvol=gtnh-backups"
+    ];
+  };
+
+  fileSystems."/opt/gtnh/.snapshots" = {
+    device = "/dev/disk/by-uuid/b6bce9f1-3c6c-41a1-a9ff-11ce3832be95";
+    fsType = "btrfs";
+    options = [
+      "compress=zstd:3"
+      "subvol=gtnh-snapshots"
+    ];
+  };
+
   fileSystems."/export/data" = {
     device = "/data";
     fsType = "none";

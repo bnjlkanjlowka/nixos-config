@@ -9,6 +9,8 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
 
+    ./modules/wireguard.nix
+
     ../../modules/desktop/gnome.nix
     ../../modules/desktop/ptyxis.nix
     ../../modules/desktop/firefox.nix
@@ -18,7 +20,6 @@
     ../../modules/networking
     ../../modules/networking/xray.nix
     ../../modules/networking/tproxy-xray
-    ../../modules/networking/wireguard.nix
 
     ../../modules/system
     ../../modules/system/users.nix
@@ -49,28 +50,12 @@
 
   home-manager = {
     backupFileExtension = "backup";
-    users.bnjlka = {
+    users.bnjlka = { config, ... }: {
       home.stateVersion = "26.05";
+
+      home.file."Downloads".source = config.lib.file.mkOutOfStoreSymlink "/data/downloads";
     };
   };
-
-  nix.distributedBuilds = true;
-
-  nix.buildMachines = [
-    {
-      hostName = "server";
-      system = "x86_64-linux";
-      protocol = "ssh-ng";
-      maxJobs = 4;
-      speedFactor = 2;
-      supportedFeatures = [
-        "nixos-test"
-        "benchmark"
-        "big-parallel"
-        "kvm"
-      ];
-    }
-  ];
 
   nix.settings.trusted-users = [
     "root"
@@ -78,7 +63,7 @@
   ];
 
   services.logind.settings.Login = {
-    HandleLidSwitch = "hibernate";
+    HandleLidSwitch = "suspend";
     HandleLidSwitchExternalPower = "lock";
     HandleLidSwitchDocked = "ignore";
   };

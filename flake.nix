@@ -17,6 +17,15 @@
       millennium,
       ...
     }:
+    let
+      overlays = [
+        (import ./overlays/mpris-label.nix)
+        (import ./overlays/proton-ge.nix)
+        (import ./overlays/newsflash.nix)
+        (import ./overlays/quick-settings-audio-panel.nix)
+        millennium.overlays.default
+      ];
+    in
     {
       nixosConfigurations.jlowka = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -25,9 +34,7 @@
           home-manager.nixosModules.home-manager
           sops-nix.nixosModules.sops
           {
-            nixpkgs.overlays = [
-              (import ./overlays/mpris-label.nix)
-            ];
+            nixpkgs.overlays = overlays;
           }
         ];
       };
@@ -39,11 +46,7 @@
           home-manager.nixosModules.home-manager
           sops-nix.nixosModules.sops
           {
-            nixpkgs.overlays = [
-              (import ./overlays/mpris-label.nix)
-              (import ./overlays/proton-ge.nix)
-              millennium.overlays.default
-            ];
+            nixpkgs.overlays = overlays;
           }
         ];
       };
@@ -54,11 +57,6 @@
           ./hosts/server/configuration.nix
           home-manager.nixosModules.home-manager
           sops-nix.nixosModules.sops
-          {
-            nixpkgs.overlays = [
-              (import ./overlays/pihole-ftl.nix)
-            ];
-          }
         ];
       };
 
@@ -122,11 +120,6 @@
           ./hosts/router/configuration.nix
           home-manager.nixosModules.home-manager
           sops-nix.nixosModules.sops
-          {
-            nixpkgs.overlays = [
-              (import ./overlays/pihole-ftl.nix)
-            ];
-          }
         ];
       };
     };

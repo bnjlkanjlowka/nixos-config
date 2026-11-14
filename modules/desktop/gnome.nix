@@ -27,7 +27,6 @@
     gnomeExtensions.disable-workspace-switcher-overlay
     gnomeExtensions.auto-move-windows
     gnomeExtensions.quick-settings-audio-panel
-    gnomeExtensions.brightness-restore
     gnomeExtensions.just-perfection
     gnomeExtensions.mpris-label
   ];
@@ -61,7 +60,6 @@
             disable-workspace-switcher-overlay.extensionUuid
             auto-move-windows.extensionUuid
             quick-settings-audio-panel.extensionUuid
-            brightness-restore.extensionUuid
             just-perfection.extensionUuid
             mpris-label.extensionUuid
           ];
@@ -125,6 +123,10 @@
           toggle-message-tray = [ ];
         };
 
+        "org/gnome/settings-daemon/plugins/media-keys" = {
+          mic-mute = [ "<Alt>backslash" ];
+        };
+
         "org/gnome/desktop/peripherals/mouse" = {
           accel-profile = "flat";
         };
@@ -149,6 +151,10 @@
 
         "org/gnome/shell/extensions/blur-my-shell/panel" = {
           blur = false;
+        };
+
+        "org/gnome/shell/extensions/blur-my-shell/popup" = {
+          blur = true;
         };
       };
     };

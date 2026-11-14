@@ -8,10 +8,10 @@
 }:
 let
   whitelist = ''
-    bnjlkanjlowka
+    7a2b0679-0820-3611-9fa6-58d310f3e7aa
   '';
   ops = ''
-    bnjlkanjlowka
+    7a2b0679-0820-3611-9fa6-58d310f3e7aa
   '';
 in
 {
@@ -42,12 +42,18 @@ in
       "CREATE_CONSOLE_IN_PIPE" = "true";
       "DUMP_SERVER_PROPERTIES" = "TRUE";
       "EULA" = "TRUE";
-      "GTNH_USE_DAILY_BUILD" = "true";
-      "GTNH_PACK_VERSION" = "40855442438";
+      "GTNH_USE_DAILY_BUILD" = "false";
+      "GTNH_PACK_VERSION" = "2.9.0";
       "MEMORY" = "12G";
-      "OPS" = ops;
       "TYPE" = "GTNH";
+      "USER_API_PROVIDER" = "mojang";
+      "GTNH_DELETE_BACKUPS" = "true";
+
+      #server properties
+      "ONLINE_MODE" = "false";
       "WHITELIST" = whitelist;
+      "OPS" = ops;
+      "VIEW_DISTANCE" = "16";
     };
     environmentFiles = [
       config.sops.secrets.gh-token.path

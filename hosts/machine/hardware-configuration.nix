@@ -66,7 +66,7 @@
       "_netdev"
       "nofail"
       "x-systemd.automount"
-      "x-systemd.mount-timeout=5s"
+      "x-systemd.mount-timeout=10s"
     ];
   };
 
@@ -77,7 +77,7 @@
       "_netdev"
       "nofail"
       "x-systemd.automount"
-      "x-systemd.mount-timeout=5s"
+      "x-systemd.mount-timeout=10s"
     ];
   };
 
