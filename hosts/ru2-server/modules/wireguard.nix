@@ -42,7 +42,7 @@
             "fd00:130::1/128" # home
             "fd00:30::10/64"
           ];
-          Endpoint = "wg.bnjlkanjlowka.xyz:49833";
+          Endpoint = "wg.bnjlkanjlowka.xyz:48783";
         }
         {
           #ru1-server
