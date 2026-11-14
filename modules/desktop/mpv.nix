@@ -17,7 +17,7 @@
         slang = "ru";
         ytdl-format =
           if config.networking.hostName == "jlowka" then
-            "bestvideo[height=1080][vcodec*=avc1]+bestaudio"
+            "bestvideo[height=1080][vcodec*=avc1]+bestaudio/bestvideo*[height=1080][vcodec*=avc1]"
           else
             "best";
       };
