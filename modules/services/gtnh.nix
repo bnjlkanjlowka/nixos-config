@@ -48,6 +48,7 @@ in
       "TYPE" = "GTNH";
       "USER_API_PROVIDER" = "mojang";
       "GTNH_DELETE_BACKUPS" = "true";
+      "PREFER_IPV6" = "true";
 
       #server properties
       "ONLINE_MODE" = "false";
@@ -67,7 +68,8 @@ in
       "--network=gtnh_default"
     ];
     ports = [
-      "14228:25565/tcp"
+      "0.0.0.0:14228:25565/tcp"
+      "[::]:14228:25565/tcp"
     ];
 
   };
@@ -102,7 +104,7 @@ in
       ExecStop = "podman network rm -f gtnh_default";
     };
     script = ''
-      podman network inspect gtnh_default || podman network create gtnh_default
+      podman network inspect gtnh_default || podman network create --ipv6 gtnh_default
     '';
     partOf = [ "podman-compose-gtnh-root.target" ];
     wantedBy = [ "podman-compose-gtnh-root.target" ];
