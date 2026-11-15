@@ -36,11 +36,12 @@
           #spb
           PublicKey = "4+TpdRwQgNlMiS5lddRHrpMX9VAVzP2zmgLbVCC5LFc=";
           AllowedIPs = [
-            "fd00:130::10/128"
+            "fd00:130::10/128" #spb
             "fd00:130::2/128" # jlowka
             "fd00:130::3/128" # Pixel-8a
             "fd00:130::1/128" # home
-            "fd00:30::10/64"
+            "fd00:30::/64" #spb lan
+            "fd00:20::/64" #home lan
           ];
           Endpoint = "wg.bnjlkanjlowka.xyz:48783";
         }

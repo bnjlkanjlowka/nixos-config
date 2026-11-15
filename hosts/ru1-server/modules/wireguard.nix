@@ -38,6 +38,7 @@
           AllowedIPs = [
             "fd00:130::/64"
             "fd00:30::/64"
+            "fd00:20::/64" #home lan
           ];
           Endpoint = "ru2.ww.bnjlkanjlowka.xyz:47893";
         }
