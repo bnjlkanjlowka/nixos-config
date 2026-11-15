@@ -50,10 +50,8 @@
 
   home-manager = {
     backupFileExtension = "backup";
-    users.bnjlka = { config, ... }: {
+    users.bnjlka = {
       home.stateVersion = "26.05";
-
-      home.file."Downloads".source = config.lib.file.mkOutOfStoreSymlink "/data/downloads";
     };
   };
 
