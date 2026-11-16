@@ -57,6 +57,9 @@
 
             meta l4proto { tcp, udp } ip daddr @ip_for_tproxy oifname wan0 meta mark set 1 accept;
             meta l4proto { tcp, udp } ip6 daddr @ipv6_for_tproxy oifname wan0 meta mark set 1 accept;
+
+            ip daddr 78.40.217.35 udp dport 47893 oifname wan0 meta mark set 1 accept;
+            ip6 daddr { 2a03:6f01:1:2::1:efd4, 2a03:6f01:1:2::4e2e } udp dport 47893 oifname wan0 meta mark set 1 accept;
           }
 
           chain prerouting {

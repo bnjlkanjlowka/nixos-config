@@ -30,7 +30,6 @@
         ListenPort = 48783;
         PrivateKeyFile = config.sops.secrets.wg-server-private-key.path;
         RouteTable = "main";
-        FirewallMark = 2;
       };
 
       wireguardPeers = [

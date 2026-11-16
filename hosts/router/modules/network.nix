@@ -2,6 +2,13 @@
 
 {
   systemd.network = {
+    config = {
+      networkConfig = {
+        IPv4Forwarding = true;
+        IPv6Forwarding = true;
+      };
+    };
+
     links = {
       "10-wan0" = {
         matchConfig.MACAddress = "BC:24:11:FB:E6:A9";
@@ -39,13 +46,14 @@
           IPv6SendRA = true;
           DHCPPrefixDelegation = true;
           IPv6AcceptRA = false;
-          IPv6PrivacyExtensions = true;
+          IPv6PrivacyExtensions = false;
         };
 
         dhcpPrefixDelegationConfig = {
           UplinkInterface = "wan0";
           SubnetId = "auto";
-          Announce = "yes";
+          Announce = true;
+          Assign = false;
         };
 
         ipv6SendRAConfig = {
