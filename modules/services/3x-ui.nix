@@ -25,7 +25,7 @@ in
     in
     {
       "${matchAll}".allowedUDPPorts = [ 53 ];
-      "wg0".allowedTCPPorts = [ 20053 ];
+      #"wg0".allowedTCPPorts = [ 20053 ];
     };
 
   virtualisation.oci-containers.backend = "podman";
@@ -132,4 +132,6 @@ in
       };
     };
   };
+
+  networking.firewall.allowedTCPPorts = [ 20053 ];
 }
