@@ -15,6 +15,7 @@
     ../../modules/desktop/mpv.nix
     ../../modules/desktop/steam.nix
     ../../modules/desktop/zed.nix
+    ../../modules/desktop/minecraft.nix
 
     ../../modules/networking
     ../../modules/networking/xray.nix
@@ -34,7 +35,23 @@
   networking = {
     hostName = "machine";
     networkmanager = {
-      enable = true;
+      enable = false;
+    };
+    useNetworkd = true;
+  };
+
+  systemd.network = {
+    enable = true;
+    networks = {
+      "10-wired" = {
+        matchConfig.Name = "enp8s0";
+        networkConfig = {
+          DHCP = "yes";
+          UseDomains = true;
+          IPv6AcceptRA = true;
+          IPv6PrivacyExtensions = true;
+        };
+      };
     };
   };
 
@@ -45,11 +62,11 @@
 
   home-manager = {
     backupFileExtension = "backup";
-    users.bnjlka = { config, ... }: {
-      home.stateVersion = "26.05";
+    users.bnjlka.home.stateVersion = "26.05";
+  };
 
-      home.file."Downloads".source = config.lib.file.mkOutOfStoreSymlink "/data/downloads";
-    };
+  services.beesd.filesystems."root" = {
+    spec = "UUID=03ffd841-c8f9-4326-aa2e-d268e500c94d";
   };
 
   # This value determines the NixOS release from which the default

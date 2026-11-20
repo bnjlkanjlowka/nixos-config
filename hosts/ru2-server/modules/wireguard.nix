@@ -43,7 +43,6 @@
             "fd00:30::/64" # spb lan
             "fd00:20::/64" # home lan
           ];
-          Endpoint = "wg.bnjlkanjlowka.xyz:48783";
         }
         {
           #ru1-server

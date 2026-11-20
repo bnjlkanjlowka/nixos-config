@@ -5,7 +5,9 @@
     enable = true;
     user = "bnjlka";
     settings = {
+      rpc-bind-address = "fd00:30::2";
       rpc-host-whitelist = "torrent*";
+      rpc_whitelist = "fd00:30::*,fd00:20::*,fd00:130::*";
 
       download-dir = "/data";
       incomplete-dir-enabled = false;
@@ -24,16 +26,5 @@
     openPeerPorts = true;
   };
 
-  services.nginx = {
-    virtualHosts."torrent.spb.lan" = {
-      serverAliases = [
-        "torrent"
-      ];
-
-      locations."/" = {
-        proxyPass = "http://127.0.0.1:9091";
-        recommendedProxySettings = true;
-      };
-    };
-  };
+  networking.firewall.allowedTCPPorts = [ 9091 ];
 }

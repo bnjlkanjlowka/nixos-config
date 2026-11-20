@@ -21,8 +21,8 @@
       overlays = [
         (import ./overlays/mpris-label.nix)
         (import ./overlays/proton-ge.nix)
-        (import ./overlays/newsflash.nix)
-        (import ./overlays/quick-settings-audio-panel.nix)
+        #(import ./overlays/newsflash.nix)
+        #(import ./overlays/quick-settings-audio-panel.nix)
         millennium.overlays.default
       ];
     in

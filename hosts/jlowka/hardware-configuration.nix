@@ -65,8 +65,7 @@
       "_netdev"
       "nofail"
       "x-systemd.automount"
-      "x-systemd.mount-timeout=5s"
-      "x-systemd.requires=NetworkManager.service"
+      "x-systemd.mount-timeout=10s"
     ];
   };
 
@@ -78,7 +77,6 @@
       "nofail"
       "x-systemd.automount"
       "x-systemd.mount-timeout=10s"
-      "x-systemd.requires=NetworkManager.service"
     ];
   };
 

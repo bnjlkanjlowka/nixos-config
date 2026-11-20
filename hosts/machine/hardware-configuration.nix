@@ -64,7 +64,6 @@
     fsType = "nfs4";
     options = [
       "_netdev"
-      "nofail"
       "x-systemd.automount"
       "x-systemd.mount-timeout=10s"
     ];
@@ -75,7 +74,6 @@
     fsType = "nfs4";
     options = [
       "_netdev"
-      "nofail"
       "x-systemd.automount"
       "x-systemd.mount-timeout=10s"
     ];

@@ -69,6 +69,7 @@
             "fd00:130::20/64"
           ];
           Endpoint = "ru2.ww.bnjlkanjlowka.xyz:47893";
+          PersistentKeepalive = 30;
         }
       ];
     };

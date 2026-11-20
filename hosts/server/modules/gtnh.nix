@@ -137,7 +137,7 @@ in
 
   sops = {
     secrets.gh-token = {
-      sopsFile = ../../secrets/gtnh/gh-token.env;
+      sopsFile = ../../../secrets/gtnh/gh-token.env;
       format = "dotenv";
     };
   };

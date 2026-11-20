@@ -13,24 +13,6 @@
       ];
 
       forwardPorts = [
-        #nginx
-        {
-          destination = "192.168.30.112:443";
-          proto = "tcp";
-          sourcePort = 443;
-          loopbackIPs = [
-            "188.243.72.107"
-          ];
-        }
-        {
-          destination = "192.168.30.112:80";
-          proto = "tcp";
-          sourcePort = 80;
-          loopbackIPs = [
-            "188.243.72.107"
-          ];
-        }
-
         #transmission
         {
           destination = "192.168.30.112:51413";
@@ -42,17 +24,6 @@
           proto = "udp";
           sourcePort = 51413;
         }
-
-        #3x-ui
-        {
-          destination = "192.168.30.112:20053";
-          proto = "tcp";
-          sourcePort = 20053;
-          loopbackIPs = [
-            "188.243.72.107"
-          ];
-        }
-
         #ssh-server
         {
           destination = "192.168.30.112:1285";
@@ -84,8 +55,6 @@
       type inet_service
       flags constant
       elements = {
-        80, 443, #nginx
-        20053, #3x-ui
         51413, #transmission
         1285, #ssh
       }

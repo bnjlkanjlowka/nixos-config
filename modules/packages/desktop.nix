@@ -6,7 +6,6 @@
     feishin
     discord
     easyeffects
-    prismlauncher
   ];
 
   programs.obs-studio = {

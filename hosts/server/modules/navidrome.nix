@@ -3,7 +3,7 @@
 {
   sops = {
     secrets.lastfm-keys = {
-      sopsFile = ../../secrets/navidrome/lastfm.env;
+      sopsFile = ../../../secrets/navidrome/lastfm.env;
       format = "dotenv";
     };
   };
@@ -13,7 +13,7 @@
     environmentFile = config.sops.secrets.lastfm-keys.path;
     settings = {
       MusicFolder = "/data/music";
-      Address = "127.0.0.1";
+      Address = "[fd00:30::2]";
     };
   };
 
@@ -25,14 +25,5 @@
     ];
   };
 
-  services.nginx = {
-    virtualHosts."music.bnjlkanjlowka.xyz" = {
-      enableACME = true;
-      forceSSL = true;
-
-      locations."/" = {
-        proxyPass = "http://127.0.0.1:4533";
-      };
-    };
-  };
+  networking.firewall.allowedTCPPorts = [ 4533 ];
 }

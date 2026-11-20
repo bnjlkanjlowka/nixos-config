@@ -9,22 +9,20 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
 
-    ./modules/3x-ui.nix
+    #./modules/3x-ui.nix
     ./modules/nfs.nix
     ./modules/snapper.nix
+    ./modules/navidrome.nix
+    ./modules/immich.nix
+    ./modules/transmission.nix
+    ./modules/jellyfin.nix
+    ./modules/kavita.nix
+    ./modules/miniflux.nix
+    ./modules/rsshub.nix
+    ./modules/radicale.nix
+    ./modules/gtnh.nix
 
     ../../modules/desktop/mpv.nix
-
-    ../../modules/services/navidrome.nix
-    ../../modules/services/immich.nix
-    ../../modules/services/nginx.nix
-    ../../modules/services/transmission.nix
-    ../../modules/services/jellyfin.nix
-    ../../modules/services/kavita.nix
-    ../../modules/services/miniflux.nix
-    ../../modules/services/rss-bridge.nix
-    ../../modules/services/radicale.nix
-    ../../modules/services/gtnh.nix
 
     ../../modules/networking
     ../../modules/networking/xray.nix

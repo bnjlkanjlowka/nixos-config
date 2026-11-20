@@ -15,6 +15,7 @@
     ./modules/wireguard.nix
     ./modules/pihole.nix
     ./modules/unbound.nix
+    ./modules/nginx.nix
 
     ../../modules/services/nginx.nix
 
